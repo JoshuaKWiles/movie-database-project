@@ -33,44 +33,44 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         
         -->
         
-        <StackPanel x:Name="actorOne" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
-            <Image x:Name="actorOnePhoto" Source="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" MaxHeight="400px" Height="100px" Stretch="Fill"/>
-            <TextBlock x:Name="actorOneName" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Actor 1" Foreground="White" MaxHeight="20px"/>
+        <StackPanel x:Name="actor1" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
+            <Image x:Name="actor1Photo" Source="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" MaxHeight="400px" Height="100px" Stretch="Fill"/>
+            <TextBlock x:Name="actor1Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Actor" Foreground="White" MaxHeight="20px"/>
         </StackPanel>
 
-        <StackPanel x:Name="actorTwo" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
-            <Image x:Name="actorTwoPhoto" Source="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" MaxHeight="400px" Height="100px" Stretch="Fill"/>
-            <TextBlock x:Name="actorTwoName" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Actor 2" Foreground="White" MaxHeight="20px"/>
+        <StackPanel x:Name="actor2" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
+            <Image x:Name="actor2Photo" Source="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" MaxHeight="400px" Height="100px" Stretch="Fill"/>
+            <TextBlock x:Name="actor2Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Actor" Foreground="White" MaxHeight="20px"/>
         </StackPanel>
 
-        <StackPanel x:Name="actorThree" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
-            <Image x:Name="actorThreePhoto" Source="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" MaxHeight="400px" Height="100px" Stretch="Fill"/>
-            <TextBlock x:Name="actorThreeName" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Actor 3" Foreground="White" MaxHeight="20px"/>
+        <StackPanel x:Name="actor3" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
+            <Image x:Name="actor3Photo" Source="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" MaxHeight="400px" Height="100px" Stretch="Fill"/>
+            <TextBlock x:Name="actor3Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Actor" Foreground="White" MaxHeight="20px"/>
         </StackPanel>
 
-        <StackPanel x:Name="actorFour" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
-            <Image x:Name="actorFourPhoto" Source="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" MaxHeight="400px" Height="100px" Stretch="Fill"/>
-            <TextBlock x:Name="actorFourName" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Actor 4" Foreground="White" MaxHeight="20px"/>
+        <StackPanel x:Name="actor4" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
+            <Image x:Name="actor4Photo" Source="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" MaxHeight="400px" Height="100px" Stretch="Fill"/>
+            <TextBlock x:Name="actor4Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Actor" Foreground="White" MaxHeight="20px"/>
         </StackPanel>
 
-        <StackPanel x:Name="actorFive" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
-            <Image x:Name="actorFivePhoto" Source="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" MaxHeight="400px" Height="100px" Stretch="Fill"/>
-            <TextBlock x:Name="actorFiveName" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Actor 5" Foreground="White" MaxHeight="20px"/>
+        <StackPanel x:Name="actor5" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
+            <Image x:Name="actor5Photo" Source="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" MaxHeight="400px" Height="100px" Stretch="Fill"/>
+            <TextBlock x:Name="actor5Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Actor" Foreground="White" MaxHeight="20px"/>
         </StackPanel>
 
-        <StackPanel x:Name="actorSix" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
-            <Image x:Name="actorSixPhoto" Source="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" MaxHeight="400px" Height="100px" Stretch="Fill"/>
-            <TextBlock x:Name="actorSixName" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Actor 6" Foreground="White" MaxHeight="20px"/>
+        <StackPanel x:Name="actor6" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
+            <Image x:Name="actor6Photo" Source="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" MaxHeight="400px" Height="100px" Stretch="Fill"/>
+            <TextBlock x:Name="actor6Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Actor" Foreground="White" MaxHeight="20px"/>
         </StackPanel>
 
-        <StackPanel x:Name="actorSeven" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
-            <Image x:Name="actorSevenPhoto" Source="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" MaxHeight="400px" Height="100px" Stretch="Fill"/>
-            <TextBlock x:Name="actorSevenName" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Actor 7" Foreground="White" MaxHeight="20px"/>
+        <StackPanel x:Name="actor7" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
+            <Image x:Name="actor7Photo" Source="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" MaxHeight="400px" Height="100px" Stretch="Fill"/>
+            <TextBlock x:Name="actor7Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Actor" Foreground="White" MaxHeight="20px"/>
         </StackPanel>
 
-        <StackPanel x:Name="actorEight" Grid.Row="2" Grid.Column="4" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
-            <Image x:Name="actorEightPhoto" Source="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" MaxHeight="400px" Height="100px" Stretch="Fill"/>
-            <TextBlock x:Name="actorEightName" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Actor 8" Foreground="White" MaxHeight="20px"/>
+        <StackPanel x:Name="actor8" Grid.Row="2" Grid.Column="4" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
+            <Image x:Name="actor8Photo" Source="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" MaxHeight="400px" Height="100px" Stretch="Fill"/>
+            <TextBlock x:Name="actor8Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Actor" Foreground="White" MaxHeight="20px"/>
         </StackPanel>
 
     </Grid>

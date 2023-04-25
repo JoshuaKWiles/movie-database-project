@@ -31,6 +31,19 @@ namespace MovieDatabaseProject
             main.FactsButton.Background = new SolidColorBrush(Colors.LightGray);
             main.SimilarButton.Background = new SolidColorBrush(Colors.LightGray);
         }
-        
+        public void getData()
+        {
+            using (var reader = new StreamReader("scraper\\actors.csv"))
+            {
+                while (!reader.EndOfStream)
+                {
+                    var line = reader.ReadLine();
+                    var values = line.Split(',');
+
+                    actorimages.Append(values[0]);
+                    actornames.Append(values[1]);
+                }
+            }
+        }
     }
 }

@@ -33,6 +33,49 @@ namespace MovieDatabaseProject
             main.ScreenshotsButton.Background = new SolidColorBrush(Colors.LightGray);
             main.FactsButton.Background = new SolidColorBrush(Colors.LightGray);
             main.SimilarButton.Background = new SolidColorBrush(Colors.LightGray);
+            getImages();
+            ImageSourceConverter imgs = new ImageSourceConverter();
+            
+            for (int i = 0; i < actornames.Length; i++)
+            {
+                switch(i)
+                {
+                    case 0:
+                        actor1Name.Text = actornames[i];
+                        actor1Photo.SetValue(Image.SourceProperty, imgs.ConvertFromString(actorimages[i]));
+                        break;
+                    case 1:
+                        actor2Name.Text = actornames[i];
+                        actor2Photo.SetValue(Image.SourceProperty, imgs.ConvertFromString(actorimages[i]));
+                        break;
+                    case 2:
+                        actor3Name.Text = actornames[i];
+                        actor3Photo.SetValue(Image.SourceProperty, imgs.ConvertFromString(actorimages[i]));
+                        break;
+                    case 3:
+                        actor4Name.Text = actornames[i];
+                        actor4Photo.SetValue(Image.SourceProperty, imgs.ConvertFromString(actorimages[i]));
+                        break;
+                    case 4:
+                        actor5Name.Text = actornames[i];
+                        actor5Photo.SetValue(Image.SourceProperty, imgs.ConvertFromString(actorimages[i]));
+                        break;
+                    case 5:
+                        actor6Name.Text = actornames[i];
+                        actor6Photo.SetValue(Image.SourceProperty, imgs.ConvertFromString(actorimages[i]));
+                        break;
+                    case 6:
+                        actor7Name.Text = actornames[i];
+                        actor7Photo.SetValue(Image.SourceProperty, imgs.ConvertFromString(actorimages[i]));
+                        break;
+                    case 7:
+                        actor8Name.Text = actornames[i];
+                        actor8Photo.SetValue(Image.SourceProperty, imgs.ConvertFromString(actorimages[i]));
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
         public void getImages()
         {
@@ -45,8 +88,6 @@ namespace MovieDatabaseProject
 
                     actorimages.Append(values[0]);
                     actornames.Append(values[1]);
-
-
                 }
             }
         }

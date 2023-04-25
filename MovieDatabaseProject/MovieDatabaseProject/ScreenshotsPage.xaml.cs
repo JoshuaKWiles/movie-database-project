@@ -66,7 +66,10 @@ namespace MovieDatabaseProject
                     var line = reader.ReadLine();
                     var values = line.Split(',');
 
-                    imageAddresses.Append(values[0]);
+                    foreach (string value in values)
+                    {
+                        imageAddresses.Append(value);
+                    };
                 }
             }
         }
