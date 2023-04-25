@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZVIEndg6TDqrMDRjmYkIAPLrKTh9rM1YTm4i/ww5Hkf7PvexSGcN99q9tdNHpgMlKVFPcX4ChZqMN3nn7FmwEw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Josh\\Documents\\MovieDatabaseProject\\movie-database-project\\MovieDatabaseProject\\MovieDatabaseProject\\MovieDatabaseProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Josh\\.nuget\\packages\\microsoft.web.webview2\\1.0.1722.45\\microsoft.web.webview2.1.0.1722.45.nupkg.sha512"
+  ],
+  "logs": []
+}

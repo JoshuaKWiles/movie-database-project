@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="ActorsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DescriptionPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FactsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ScreenshotsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SearchPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SimilarMoviesPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TrailerPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="ActorsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DescriptionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FactsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ScreenshotsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SearchPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SimilarMoviesPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TrailerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
