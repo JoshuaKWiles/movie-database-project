@@ -33,9 +33,11 @@ namespace MovieDatabaseProject
             main.ScreenshotsButton.Background = new SolidColorBrush(Colors.LightGray);
             main.FactsButton.Background = new SolidColorBrush(Colors.LightGray);
             main.SimilarButton.Background = new SolidColorBrush(Colors.LightGray);
-            getImages();
+            //getData();
             ImageSourceConverter imgs = new ImageSourceConverter();
-            
+
+            /*
+
             for (int i = 0; i < actornames.Length; i++)
             {
                 switch(i)
@@ -75,11 +77,13 @@ namespace MovieDatabaseProject
                     default:
                         break;
                 }
+            
             }
+            */
         }
-        public void getImages()
+        public void getData()
         {
-            using (var reader = new StreamReader("scraper\\screenshots.csv"))
+            using (var reader = new StreamReader("scraper\\actors.csv"))
             {
                 while (!reader.EndOfStream)
                 {

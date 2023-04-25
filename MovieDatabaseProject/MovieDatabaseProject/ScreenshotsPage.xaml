@@ -24,13 +24,13 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock x:Name="movie_title" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="*Movie Name* Screenshots" Margin="0,0,0,0"/>
+        <TextBlock x:Name="movie_title" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="30" Text="*Movie Name* Screenshots" Margin="0,20,0,0"/>
 
-        <Image Name="picHolder" Grid.Column="1" Grid.Row="0" Grid.RowSpan="4" Grid.ColumnSpan="4" Stretch="Uniform" Source="https://www.goway.com/media/cache/38/e9/38e939fb4c5bc42de16322f121644cbc.jpg" VerticalAlignment="Center" Margin="0 50"
+        <Image Name="picHolder" Grid.Column="1" Grid.Row="0" Grid.RowSpan="4" Grid.ColumnSpan="4" Stretch="Uniform" Source="https://www.beano.com/wp-content/uploads/legacy/83031_Home-Alone-4.jpg?strip=all&;quality=86&;w=887" VerticalAlignment="Center" Margin="0 50"
                ScrollViewer.VerticalScrollBarVisibility="Disabled" />
 
-        <Button Name="btnBack" Click="GoBack" Grid.Column="1" Width="150" HorizontalAlignment="Left" Grid.Row="3" Height="35">Back</Button>
-        <Button Name="btnNext" Click="GoNext" Grid.Column="4" Width="150" HorizontalAlignment="Right" Grid.Row="3" Height="35">Next</Button>
-        
+        <Button Name="btnBack" Click="GoBack" Grid.Column="1" Width="150" HorizontalAlignment="Center" Grid.Row="3" Height="35" Margin="0,55,0,30">Back</Button>
+        <Button Name="btnNext" Click="GoNext" Grid.Column="4" Width="150" HorizontalAlignment="Center" Grid.Row="3" Height="35" Margin="0,55,0,30">Next</Button>
+
     </Grid>
 </Page>

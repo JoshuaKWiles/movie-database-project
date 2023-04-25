@@ -25,6 +25,28 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         </Grid.ColumnDefinitions>
 
         <TextBlock x:Name="movie_title" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="Similar Movies" Margin="0,0,0,0"/>
+        <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel x:Name="movie1" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
+                <Image x:Name="movie1Photo" Source="https://www.sparetimebarbowlgrill.com/editor/dudaone/images/placeholders/imgPlaceholder1.png" MaxHeight="400px" Height="180px" Stretch="Fill"/>
+                <TextBlock x:Name="movie1Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Movie 1" Foreground="White" MaxHeight="20px" FontSize="18"/>
+            </StackPanel>
+
+            <StackPanel x:Name="movie2" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
+                <Image x:Name="movie2Photo" Source="https://www.sparetimebarbowlgrill.com/editor/dudaone/images/placeholders/imgPlaceholder1.png" MaxHeight="400px" Height="180" Stretch="Fill"/>
+                <TextBlock x:Name="movie2Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Movie 2" Foreground="White" MaxHeight="20px" FontSize="18"/>
+            </StackPanel>
+
+            <StackPanel x:Name="movie3" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
+                <Image x:Name="movie3Photo" Source="https://www.sparetimebarbowlgrill.com/editor/dudaone/images/placeholders/imgPlaceholder1.png" MaxHeight="400px" Height="180" Stretch="Fill"/>
+                <TextBlock x:Name="movie3Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Movie 3" Foreground="White" MaxHeight="20px" FontSize="18"/>
+            </StackPanel>
+        </Grid>
+        
 
     </Grid>
 </Page>
