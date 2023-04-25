@@ -29,7 +29,7 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 
         <DockPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="4" Margin="0 0 0 20">
             <wv2:WebView2 Name="webView"
-                  Source="https://www.youtube.com/embed/yLNpy62jIFk"/>
+                  Source="https://www.youtube.com/embed/u31qwQUeGuM"/>
         </DockPanel>
     </Grid>
 </Page>

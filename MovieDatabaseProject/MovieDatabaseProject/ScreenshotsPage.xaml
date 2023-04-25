@@ -26,7 +26,7 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 
         <TextBlock x:Name="movie_title" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="30" Text="*Movie Name* Screenshots" Margin="0,20,0,0"/>
 
-        <Image Name="picHolder" Grid.Column="1" Grid.Row="0" Grid.RowSpan="4" Grid.ColumnSpan="4" Stretch="Uniform" Source="https://www.beano.com/wp-content/uploads/legacy/83031_Home-Alone-4.jpg?strip=all&;quality=86&;w=887" VerticalAlignment="Center" Margin="0 50"
+        <Image Name="picHolder" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Grid.ColumnSpan="4" Stretch="Fill"  Source="https://us.123rf.com/450wm/mathier/mathier1905/mathier190500002/134557216-no-thumbnail-image-placeholder-for-forums-blogs-and-websites.jpg?ver=6" VerticalAlignment="Top" Margin="0,90,0,0" 
                ScrollViewer.VerticalScrollBarVisibility="Disabled" />
 
         <Button Name="btnBack" Click="GoBack" Grid.Column="1" Width="150" HorizontalAlignment="Center" Grid.Row="3" Height="35" Margin="0,55,0,30">Back</Button>

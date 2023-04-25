@@ -40,7 +40,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Button x:Name="SearchReturnButton" Click="SearchReturnButton_Click" FontSize="16" BorderThickness="2"  Margin="0,0, 20,0" MaxWidth="400px" Grid.Column="0" Grid.Row="0" Height="40px" VerticalAlignment="Top">
+                <Button x:Name="SearchReturnButton" Click="SearchReturnButton_Click" FontSize="16" BorderThickness="2"  Margin="0,0,15,0" MaxWidth="400px" Grid.Column="0" Grid.Row="0" Height="50px" VerticalAlignment="Top">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="5"/>

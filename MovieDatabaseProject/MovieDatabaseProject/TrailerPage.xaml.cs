@@ -31,7 +31,7 @@ namespace MovieDatabaseProject
             main.ScreenshotsButton.Background = new SolidColorBrush(Colors.LightGray);
             main.FactsButton.Background = new SolidColorBrush(Colors.LightGray);
             main.SimilarButton.Background = new SolidColorBrush(Colors.LightGray);
-            //string trailerLink = getData();
+            string trailerLink = getData();
         }
         public string getData()
         {

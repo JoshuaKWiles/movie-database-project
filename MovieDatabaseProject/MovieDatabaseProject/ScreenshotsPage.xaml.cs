@@ -32,7 +32,7 @@ namespace MovieDatabaseProject
             main.ScreenshotsButton.Background = new SolidColorBrush(Colors.Gray);
             main.FactsButton.Background = new SolidColorBrush(Colors.LightGray);
             main.SimilarButton.Background = new SolidColorBrush(Colors.LightGray);
-            //getImages();
+            getImages();
 
         }
 
