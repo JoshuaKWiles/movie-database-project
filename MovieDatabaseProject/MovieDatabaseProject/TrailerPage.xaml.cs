@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,19 +31,13 @@ namespace MovieDatabaseProject
             main.ScreenshotsButton.Background = new SolidColorBrush(Colors.LightGray);
             main.FactsButton.Background = new SolidColorBrush(Colors.LightGray);
             main.SimilarButton.Background = new SolidColorBrush(Colors.LightGray);
+            //string trailerLink = getData();
         }
-        public void getData()
+        public string getData()
         {
             using (var reader = new StreamReader("scraper\\actors.csv"))
             {
-                while (!reader.EndOfStream)
-                {
-                    var line = reader.ReadLine();
-                    var values = line.Split(',');
-
-                    actorimages.Append(values[0]);
-                    actornames.Append(values[1]);
-                }
+                return reader.ReadToEnd();
             }
         }
     }
