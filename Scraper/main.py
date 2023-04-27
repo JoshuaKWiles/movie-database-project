@@ -36,8 +36,14 @@ def getimdblink(movienme):
     return imdblink
 
 
-def getdescription(imdblink):
-    imdbsoup = buildsoup(imdblink)
+def getdescription(imdbsoup):
+    imdbsoup.prettify()
+    for span in imdbsoup.select('section', class_='sc-5f699a2-0 kcphyk'):
+        for a in span('a', class_='ipc-link ipc-link--baseAlt'):
+            link = img['src']
+
+
+def getactors(imdbsoup):
     imdbsoup.prettify()
     counter = 1
     imglink = []
@@ -60,8 +66,14 @@ def getdescription(imdblink):
 #os.remove('moviename.txt')
 
 moviename = 'The Terminator'
+#get imdb link and build soup
 imdblink = getimdblink(moviename)
-actors = getdescription(imdblink)
+imdbsoup = buildsoup(imdblink)
+
+#get description, store to string
+
+#get actors info, store to list
+actors = getactors(imdbsoup)
 
 
 #with link scrape; description, actors, trailer, screenshots, facts, maybe similar movies? that may require a different site
