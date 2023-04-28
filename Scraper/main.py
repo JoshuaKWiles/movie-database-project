@@ -36,11 +36,28 @@ def getimdblink(movienme):
     return imdblink
 
 
-def getdescription(imdbsoup):
+def getdescription(imdbsoup, imdblink):
     imdbsoup.prettify()
-    for span in imdbsoup.select('section', class_='sc-5f699a2-0 kcphyk'):
+    #for divone in imdbsoup.select('div', class_='sc-fa971bb0-0 faHifs'):
+        #for divtwo in divone('div', class_='ipc-overflowText ipc-overflowText--pageSection ipc-overflowText--height-long ipc-overflowText--long ipc-overflowText--click ipc-overflowText--base'):
+            #for divthree in divtwo('div', class_="ipc-html-content ipc-html-content--base"):
+                #for divfour in divthree('div', class_="ipc-html-content-inner-div"):
+                    #print('')
+    for span in imdbsoup.select('span', class_='sc-5f699a2-0 kcphyk'):
         for a in span('a', class_='ipc-link ipc-link--baseAlt'):
-            link = img['src']
+            temp = a['href']
+            temp = temp[11:]
+            print(temp)
+            temp = 'plotsummary/' + temp
+            print(imdblink + temp)
+            doublesoup = buildsoup(imdblink + temp)
+            doublesoup.prettify()
+            for divone in doublesoup.select('div', class_='sc-f65f65be-0 fVkLRr'):
+                for divtwo in divone('div', class_='ipc-html-content-inner-div'):
+                    print(divtwo.text)
+
+
+
 
 
 def getactors(imdbsoup):
@@ -71,7 +88,7 @@ imdblink = getimdblink(moviename)
 imdbsoup = buildsoup(imdblink)
 
 #get description, store to string
-
+getdescription(imdbsoup, imdblink)
 #get actors info, store to list
 actors = getactors(imdbsoup)
 
