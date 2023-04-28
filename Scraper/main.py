@@ -3,6 +3,8 @@ import requests
 from urllib.request import Request, urlopen
 from difflib import SequenceMatcher
 import os
+import re
+import json
 
 def googlelink(movienme):
     temp = movienme.replace(" ", "+")
@@ -59,7 +61,6 @@ def getdescription(imdbsoup, imdblink):
 
 def getactors(imdbsoup):
     imdbsoup.prettify()
-    counter = 1
     imglink = []
     actorname = []
     combined = []
@@ -67,27 +68,64 @@ def getactors(imdbsoup):
         for div in section('div', class_='ipc-media ipc-media--avatar ipc-image-media-ratio--avatar ipc-media--base ipc-media--avatar-m ipc-media--avatar-circle ipc-avatar__avatar-image ipc-media__img'):
             for img in div.find_all('img', alt=True):
                 actorname.append(img['alt'])
-                #print(img['alt'])
             for img in div.find_all('img', src=True):
                 imglink.append(img['src'])
-                #print(img['src'])
     for x in range(0, 10):
         combined.append(str(imglink[x]))
         combined.append(str(actorname[x]))
     return combined
-#with open('moviename.txt') as f:
-#    moviename = f.read()
-#os.remove('moviename.txt')
 
+
+def gettrailer(imdbsoup):
+    imdbsoup.prettify()
+    extension = ''
+    vidlink = ''
+    for divone in imdbsoup.select('div', class_='sc-385ac629-9 jiVoNU'):
+        for a in divone('a', class_='ipc-btn ipc-btn--single-padding ipc-btn--center-align-content ipc-btn--default-height ipc-btn--core-baseAlt ipc-btn--theme-baseAlt ipc-btn--on-onBase ipc-secondary-button sc-f81a065-3 wHRmg'):
+            if 'videogallery' in str(a['href']):
+                extension = 'https://www.imdb.com/' + str(a['href'])
+                splitlink = extension.split('?')
+                extension = splitlink[0] + '/content_type-trailer/?' + splitlink[1]
+                doublesoup = buildsoup(extension)
+                doublesoup.prettify()
+                for divtwo in doublesoup.select('div', class_='results-item slate'):
+                    for atwo in divtwo('a', class_='video-modal'):
+                        extension = atwo['href']
+                        extension = extension[12:]
+                        extension = 'https://www.imdb.com/video' + extension
+                        splitatmark = extension.split('?')
+                        extension = str(splitatmark[0]) + '/?' + str(splitatmark[1])
+                        triplesoup = buildsoup(extension)
+                        #results = re.search('{"mimeType":"video/mp4","url":"(.*)}', triplesoup)
+                        #for result in results:
+                            #print(str(result))
+                        #for video in triplesoup.select('video', class_='jw-video jw-reset'):
+                            #vidlink = video['src']
+                        vidlink = triplesoup
+                        break
+                    if vidlink != '':
+                        break
+            if vidlink != '':
+                break
+    counter = 0
+    for script in vidlink.select('script', id_='__NEXT_DATA__'):
+        script.prettify()
+        if counter == 69:
+            print(script)
+        counter = counter + 1
+    print(counter)
+    return vidlink
+
+#beginning of main
 moviename = 'The Terminator'
-#get imdb link and build soup
 imdblink = getimdblink(moviename)
 imdbsoup = buildsoup(imdblink)
 
 #get description, store to string
 description = getdescription(imdbsoup, imdblink)
-#get actors info, store to list
+#get actors info, store to list (format: linkactor1, nameactor1, linkactor2, nameactor2, etc)
 actors = getactors(imdbsoup)
-
-
+#get movietrailer source, store to string
+gettrailer(imdbsoup)
+#print(trailer)
 #with link scrape; description, actors, trailer, screenshots, facts, maybe similar movies? that may require a different site
