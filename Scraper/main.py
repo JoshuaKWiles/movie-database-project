@@ -130,16 +130,43 @@ def gettrailer(imdbsoup):
             break
     return vidlink
 
+
+def getscreenshots(imdbsoup):
+    imdbsoup.prettify()
+    found = ''
+    imagelinks = []
+    allimages = []
+    for divone in imdbsoup.select('div', class_='sc-385ac629-9 jiVoNU'):
+        for a in divone('a',class_='ipc-btn ipc-btn--single-padding ipc-btn--center-align-content ipc-btn--default-height ipc-btn--core-baseAlt ipc-btn--theme-baseAlt ipc-btn--on-onBase ipc-secondary-button sc-f81a065-3 wHRmg'):
+            if 'mediaindex' in str(a['href']):
+                extension = 'https://www.imdb.com/' + str(a['href'])
+                found = extension
+                break
+        if found != '':
+            break
+    doublesoup = buildsoup(found)
+    count = 0
+    divimg = doublesoup.find('div', class_='media_index_thumb_list')
+    for a in divimg('a'):
+        print(a)
+        if len(imagelinks) < 20:
+            try:
+                imagelinks.append('https://www.imdb.com' + a['href'])
+            except:
+                break
+    for imagelink in imagelinks:
+        print(imagelink)
 #beginning of main
-moviename = 'Sonic the Hedgehog'
+moviename = 'The Terminator'
 imdblink = getimdblink(moviename)
 imdbsoup = buildsoup(imdblink)
 
 #get description, store to string
-description = getdescription(imdbsoup, imdblink)
+#description = getdescription(imdbsoup, imdblink)
 #get actors info, store to list (format: linkactor1, nameactor1, linkactor2, nameactor2, etc)
-actors = getactors(imdbsoup)
+#actors = getactors(imdbsoup)
 #get movietrailer source, store to string
-trailer = gettrailer(imdbsoup)
+#trailer = gettrailer(imdbsoup)
+getscreenshots(imdbsoup)
 
 #with link scrape; description, actors, trailer, screenshots, facts, maybe similar movies? that may require a different site
