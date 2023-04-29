@@ -207,14 +207,20 @@ imdbsoup = buildsoup(imdblink)
 
 #get description, store to string
 #description = getdescription(imdbsoup, imdblink)
+
 #get actors info, store to list (format: linkactor1, nameactor1, linkactor2, nameactor2, etc)
 #actors = getactors(imdbsoup)
+
 #get movietrailer source, store to string
 #trailer = gettrailer(imdbsoup)
+
 #get screenshtos links, store to list
 #screenshot = getscreenshots(imdbsoup)
+
 #get trivia, store strings in list
 #trivia = gettrivia(imdblink)
+
+#get similarmovies, store strings in list
 getsimilarmovies()
 
 #with link scrape; description, actors, trailer, screenshots, facts, maybe similar movies? that may require a different site
