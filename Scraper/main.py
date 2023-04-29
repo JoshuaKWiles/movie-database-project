@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 from urllib.request import Request, urlopen
 from difflib import SequenceMatcher
 from concurrent.futures import ThreadPoolExecutor
+import time
 import os
 
 global screenshotsoup
@@ -36,8 +37,11 @@ def getimdblink(movienme):
             while imdblink[0] != 'h':
                 imdblink = imdblink[1:]
             return imdblink
-    while imdblink[0] != 'h':
-        imdblink = imdblink[1:]
+    try:
+        while imdblink[0] != 'h':
+            imdblink = imdblink[1:]
+    except:
+        return getimdblink(movienme + " imdb")
     return imdblink
 
 
@@ -64,6 +68,7 @@ def getdescription(imdbsoup, imdblink):
     except:
         return 'FIX ME'
 
+
 def getactors(imdbsoup):
     imdbsoup.prettify()
     imglink = []
@@ -75,9 +80,13 @@ def getactors(imdbsoup):
                 actorname.append(img['alt'])
             for img in div.find_all('img', src=True):
                 imglink.append(img['src'])
-    for x in range(0, 10):
-        combined.append(str(imglink[x]))
-        combined.append(str(actorname[x]))
+
+    try:
+        for x in range(0, 10):
+            combined.append(str(imglink[x]))
+            combined.append(str(actorname[x]))
+    except:
+        return ['NULL', 'NULL']
     return combined
 
 
@@ -123,9 +132,12 @@ def gettrailer(imdbsoup):
             for part in parts:
                 if counter == 18:
                     vidlink = part[7:]
-                    splitagain = vidlink.split(r'\u0026')
-                    vidlink = splitagain[0] + '&amp;' + splitagain[1] + '&amp;' + splitagain[2]
-                    vidlink = vidlink[:-1]
+                    try:
+                        splitagain = vidlink.split(r'\u0026')
+                        vidlink = splitagain[0] + '&amp;' + splitagain[1] + '&amp;' + splitagain[2]
+                        vidlink = vidlink[:-1]
+                    except:
+                        vidlink = 'NULL'
                     break
                 counter = counter + 1
         counter = counter + 1
@@ -151,7 +163,7 @@ def getscreenshots(imdbsoup):
     count = 0
     divimg = doublesoup.find('div', class_='media_index_thumb_list')
     for a in divimg('a'):
-        if len(imagelinks) < 10:
+        if len(imagelinks) < 20:
             try:
                 imagelinks.append('https://www.imdb.com' + a['href'])
             except:
@@ -163,7 +175,7 @@ def getscreenshots(imdbsoup):
         for y in range(0, len(imagelinks)):
             pentuplethread.append(executor.submit(buildsoup, imagelinks[y]))
         for z in pentuplethread:
-            pentuplesoup.append(z.result(timeout=5))
+            pentuplesoup.append(z.result(timeout=8))
         for soup in pentuplesoup:
             for divtwo in soup.select('div', class_='sc-7c0a9e7c-2 kEDMKk'):
                 for img in divtwo('img', class_='sc-7c0a9e7c-0 fEIEer'):
@@ -197,30 +209,85 @@ def gettrivia(imdblink):
 
 def getsimilarmovies(imdbsoup):
     imdbsoup.prettify()
-    print(imdbsoup)
+    similar_movies = []
+    movies = imdbsoup.find_all('span', {'data-testid': 'title'})
+    for x in range(0, 3):
+        similar_movies.append(movies[x].text)
+    return similar_movies
 
 
 #beginning of main
-moviename = 'The Terminator'
+
+moviename = ''
+with open('moviename.txt', 'r') as files:
+    files.readline(moviename)
+
 imdblink = getimdblink(moviename)
 imdbsoup = buildsoup(imdblink)
+mainthread = []
+
+with ThreadPoolExecutor() as executor:
+    mainthread.append(executor.submit(getdescription, imdbsoup, imdblink))
+    mainthread.append(executor.submit(getactors, imdbsoup))
+    mainthread.append(executor.submit(gettrailer, imdbsoup))
+    mainthread.append(executor.submit(getscreenshots, imdbsoup))
+    mainthread.append(executor.submit(gettrivia, imdblink))
+    mainthread.append(executor.submit(getsimilarmovies, imdbsoup))
 
 #get description, store to string
-#description = getdescription(imdbsoup, imdblink)
+    description = mainthread[0].result()
 
 #get actors info, store to list (format: linkactor1, nameactor1, linkactor2, nameactor2, etc)
-#actors = getactors(imdbsoup)
+    actors = mainthread[1].result()
 
 #get movietrailer source, store to string
-#trailer = gettrailer(imdbsoup)
+    trailer = mainthread[2].result()
 
 #get screenshtos links, store to list
-#screenshot = getscreenshots(imdbsoup)
+    screenshots = mainthread[3].result()
 
 #get trivia, store strings in list
-#trivia = gettrivia(imdblink)
+    trivia = mainthread[4].result()
 
 #get similarmovies, store strings in list
-getsimilarmovies()
+    similarmovies = mainthread[5].result()
+
+
+#description = string
+#actors = list
+#trailer = string
+#screenshot = list
+#trivia = list
+#similarmovies = list
+temp = ''
+
+with open('description.txt', 'w') as files:
+    files.write(description)
+
+with open('actors.txt', 'w') as files:
+    for x in range(0, len(actors)):
+        if x % 2 == 0:
+            temp = actors[x]
+        if x % 2 == 1:
+            temp = temp + ',' + actors[x]
+            files.write(temp + '\n')
+            temp = ''
+
+with open('trailer.txt', 'w') as files:
+    files.write(trailer)
+
+with open('screenshots.txt', 'w') as files:
+    for x in range(0, len(screenshots)):
+        files.write(screenshots[x] + '\n')
+
+with open('trivia.txt', 'w') as files:
+    for x in range(0, len(trivia)):
+        files.write(trivia[x] + '\n')
+
+with open('similarmovies.txt', 'w') as files:
+    for x in range(0, len(similarmovies)):
+        files.write(similarmovies[x] + '\n')
+
+os.remove('moviename.txt')
 
 #with link scrape; description, actors, trailer, screenshots, facts, maybe similar movies? that may require a different site
