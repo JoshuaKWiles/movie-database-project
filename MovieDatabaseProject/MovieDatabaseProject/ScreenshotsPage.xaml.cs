@@ -33,6 +33,8 @@ namespace MovieDatabaseProject
             main.FactsButton.Background = new SolidColorBrush(Colors.LightGray);
             main.SimilarButton.Background = new SolidColorBrush(Colors.LightGray);
             //getImages();
+            string moviename = File.ReadAllText(@"scraper\secretmoviename.txt");
+            movie_title.Text = moviename + " Screenshots";
 
         }
 

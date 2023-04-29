@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:gif="http://wpfanimatedgif.codeplex.com"
       xmlns:local="clr-namespace:MovieDatabaseProject"
       mc:Ignorable="d" 
       d:DesignHeight="480" d:DesignWidth="900"
@@ -31,8 +32,9 @@
             The Ultimate Movie Database
         </TextBlock>
         <TextBlock Name="instructions" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" Margin="40 0 40 0" TextAlignment="Center">
-           Welcome to The Ultimate Movie "Database", to begin, enter the title of a movie into the search bar and explore to your heart's content. 
+           To begin, enter the title of a movie into the search bar. 
         </TextBlock>
-        <Image Name="loadinggif" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2" Source="https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca_w200.gif" Visibility="Hidden"/>
+        <Image Name="loadinggif" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2" gif:ImageBehavior.AnimatedSource="https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca_w200.gif" Visibility="Hidden"/>
+        <TextBlock Name="loadingmessage" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Text="Gathering Movie Data..." Visibility="Hidden"/>
     </Grid>
 </Page>

@@ -27,10 +27,14 @@ namespace MovieDatabaseProject
         private void run_cmd(string moviename)
         {
             File.WriteAllText("scraper/moviename.txt", moviename);
+            File.WriteAllText("scraper/secretmoviename.txt", moviename);
 
-            ProcessStartInfo start = new ProcessStartInfo("CMD.exe", "(cd scraper) & (python main.py)");
-            start.Arguments = string.Format("{0} {1}", "python main.py", moviename);
-            start.UseShellExecute = false;
+            ProcessStartInfo ProcessInfo;
+            Process Process;
+            ProcessInfo = new ProcessStartInfo("CMD.exe", "/C " + "(cd scraper) & (python main.py)");
+            ProcessInfo.CreateNoWindow = true;
+            ProcessInfo.UseShellExecute = false;
+            Process = Process.Start(ProcessInfo);
         }
         public SearchPage()
         {
@@ -67,8 +71,17 @@ namespace MovieDatabaseProject
             instructions.Visibility = Visibility.Hidden;
 
             loadinggif.Visibility = Visibility.Visible;
+            loadingmessage.Visibility = Visibility.Visible;
             var t = Task.Run(() => loading());
             await t;
+
+            searchbar.Visibility = Visibility.Visible;
+            searchbutton.Visibility = Visibility.Visible;
+            title.Visibility = Visibility.Visible;
+            instructions.Visibility = Visibility.Visible;
+
+            loadinggif.Visibility = Visibility.Hidden;
+            loadingmessage.Visibility = Visibility.Hidden;
 
             DescriptionNav(7);
             

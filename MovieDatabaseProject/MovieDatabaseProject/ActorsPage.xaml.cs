@@ -26,6 +26,7 @@ namespace MovieDatabaseProject
         public ActorsPage()
         {
             InitializeComponent();
+            getImages();
             var main = App.Current.MainWindow as MainWindow;
             main.DescriptionButton.Background = new SolidColorBrush(Colors.LightGray);
             main.ActorsButton.Background = new SolidColorBrush(Colors.Gray);
@@ -33,10 +34,11 @@ namespace MovieDatabaseProject
             main.ScreenshotsButton.Background = new SolidColorBrush(Colors.LightGray);
             main.FactsButton.Background = new SolidColorBrush(Colors.LightGray);
             main.SimilarButton.Background = new SolidColorBrush(Colors.LightGray);
-            //getImages();
+            
             ImageSourceConverter imgs = new ImageSourceConverter();
 
-            /*
+            string moviename = File.ReadAllText(@"scraper\secretmoviename.txt");
+            movie_title.Text = moviename + " Actors";
             for (int i = 0; i < actornames.Length; i++)
             {
                 switch(i)
@@ -77,22 +79,25 @@ namespace MovieDatabaseProject
                         break;
                 }
             }
-             */
+            
         }
 
         public void getImages()
         {
-            using (var reader = new StreamReader("scraper\\screenshots.csv"))
+            string[] images = { "", "", "", "", "", "", "", "" };
+            string[] actors = { "", "", "", "", "", "", "", "" };
+            var lines = File.ReadLines("scraper\\actors.txt");
+            int count = 0;
+            foreach (string line in lines)
             {
-                while (!reader.EndOfStream)
-                {
-                    var line = reader.ReadLine();
-                    var values = line.Split(',');
-
-                    actorimages.Append(values[0]);
-                    actornames.Append(values[1]);
-                }
+                string[] values = line.Split('|');
+                images[count] = values[0];
+                actors[count] = values[1];
+                count++;
             }
+            actor1Name.Text = images.Length.ToString();
+            actorimages = images;
+            actornames = actors;
         }
     }
 }

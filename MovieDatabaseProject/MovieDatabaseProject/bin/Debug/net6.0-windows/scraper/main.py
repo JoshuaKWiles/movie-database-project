@@ -1,24 +1,19 @@
-import concurrent.futures
-
 from bs4 import BeautifulSoup
 from urllib.request import Request, urlopen
 from difflib import SequenceMatcher
 from concurrent.futures import ThreadPoolExecutor
-import time
 import os
-
-global screenshotsoup
 
 
 def googlelink(movienme):
     temp = movienme.replace(" ", "+")
     link = 'https://google.com/search?q=' + str(temp) + "+imdb"
-    #edit link accordingly
+#edit link accordingly
     return link
 
 
 def buildsoup(link):
-    req = Request(link , headers={'User-Agent': 'Mozilla/5.0'})
+    req = Request(link, headers={'User-Agent': 'Mozilla/5.0'})
     webpage = urlopen(req).read()
     soup = BeautifulSoup(webpage, "html.parser")
     return soup
@@ -26,7 +21,6 @@ def buildsoup(link):
 
 def getimdblink(movienme):
     imdblink = 'none'
-    temp = ''
     googsoup = buildsoup(googlelink(movienme))
     googsoup.prettify()
     for divone in googsoup.select('a[href*="imdb"]'):
@@ -48,11 +42,6 @@ def getimdblink(movienme):
 def getdescription(imdbsoup, imdblink):
     imdbsoup.prettify()
     result = []
-    #for divone in imdbsoup.select('div', class_='sc-fa971bb0-0 faHifs'):
-        #for divtwo in divone('div', class_='ipc-overflowText ipc-overflowText--pageSection ipc-overflowText--height-long ipc-overflowText--long ipc-overflowText--click ipc-overflowText--base'):
-            #for divthree in divtwo('div', class_="ipc-html-content ipc-html-content--base"):
-                #for divfour in divthree('div', class_="ipc-html-content-inner-div"):
-                    #print('')
     for span in imdbsoup.select('span', class_='sc-5f699a2-0 kcphyk'):
         for a in span('a', class_='ipc-link ipc-link--baseAlt'):
             temp = a['href']
@@ -82,7 +71,7 @@ def getactors(imdbsoup):
                 imglink.append(img['src'])
 
     try:
-        for x in range(0, 10):
+        for x in range(0, 8):
             combined.append(str(imglink[x]))
             combined.append(str(actorname[x]))
     except:
@@ -110,11 +99,6 @@ def gettrailer(imdbsoup):
                         splitatmark = extension.split('?')
                         extension = str(splitatmark[0]) + '/?' + str(splitatmark[1])
                         triplesoup = buildsoup(extension)
-                        #results = re.search('{"mimeType":"video/mp4","url":"(.*)}', triplesoup)
-                        #for result in results:
-                            #print(str(result))
-                        #for video in triplesoup.select('video', class_='jw-video jw-reset'):
-                            #vidlink = video['src']
                         vidlink = triplesoup
                         break
                     if vidlink != '':
@@ -192,7 +176,6 @@ def getscreenshots(imdbsoup):
 
 def gettrivia(imdblink):
     trivia = []
-    tempone = ''
     triviasoup = buildsoup(imdblink + 'trivia/?ref_=tt_trv_trv')
     triviasoup = triviasoup.find('div', {'id': 'trivia_content'})
     soda = triviasoup.find('div', class_='list')
@@ -218,7 +201,6 @@ def getsimilarmovies(imdbsoup):
 
 #beginning of main
 
-moviename = ''
 with open('moviename.txt', 'r') as files:
     moviename = files.readline()
 
@@ -269,7 +251,7 @@ with open('actors.txt', 'w') as files:
         if x % 2 == 0:
             temp = actors[x]
         if x % 2 == 1:
-            temp = temp + ',' + actors[x]
+            temp = temp + '|' + actors[x]
             files.write(temp + '\n')
             temp = ''
 

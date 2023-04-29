@@ -1,10 +1,7 @@
-import concurrent.futures
-
 from bs4 import BeautifulSoup
 from urllib.request import Request, urlopen
 from difflib import SequenceMatcher
 from concurrent.futures import ThreadPoolExecutor
-import time
 import os
 
 global screenshotsoup

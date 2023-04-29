@@ -21,9 +21,17 @@ namespace MovieDatabaseProject
     /// </summary>
     public partial class TrailerPage : Page
     {
+        string trailer = "https://www.youtube.com/embed/u31qwQUeGuM";
+        public async void initializewebview()
+        {
+            await webView.EnsureCoreWebView2Async(null);
+            webView.CoreWebView2.NavigateToString(trailer);
+        }
         public TrailerPage()
         {
             InitializeComponent();
+            initializewebview();
+            getTrailer();
             var main = App.Current.MainWindow as MainWindow;
             main.DescriptionButton.Background = new SolidColorBrush(Colors.LightGray);
             main.ActorsButton.Background = new SolidColorBrush(Colors.LightGray);
@@ -32,13 +40,14 @@ namespace MovieDatabaseProject
             main.FactsButton.Background = new SolidColorBrush(Colors.LightGray);
             main.SimilarButton.Background = new SolidColorBrush(Colors.LightGray);
             //string trailerLink = getData();
+            string moviename = File.ReadAllText(@"scraper\secretmoviename.txt");
+            movie_title.Text = moviename + " Trailer";
+            
         }
-        public string getData()
+        public void getTrailer()
         {
-            using (var reader = new StreamReader("scraper\\actors.csv"))
-            {
-                return reader.ReadToEnd();
-            }
+            string trail = File.ReadAllText("scraper\\trailer.txt");
+            trailer = trail;
         }
     }
 }

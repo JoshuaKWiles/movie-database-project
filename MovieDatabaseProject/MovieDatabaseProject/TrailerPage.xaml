@@ -5,6 +5,7 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
       xmlns:local="clr-namespace:MovieDatabaseProject"
+      xmlns:vlc="clr-namespace:Vlc.DotNet.Wpf;assembly=Vlc.DotNet.Wpf"
       mc:Ignorable="d" 
       d:DesignHeight="480" d:DesignWidth="900"
       Title="TrailerPage">
@@ -29,7 +30,9 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 
         <DockPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="4" Margin="0 0 0 20">
             <wv2:WebView2 Name="webView"
-                  Source="https://imdb-video.media-imdb.com/vi459472921/1434659607842-pgv4ql-1563470745772.mp4?Expires=1682820055&amp;Signature=uKgVIH8Xq5NzT3442lIwYoDSGWIrfBj43MV4hxCAu~PmbyuVt85Ymhvl5EFm-fkcmINfJwnBw6QQ09NsssduFVye3QChwG7uiqnBcKWYu3~IFTrkBuf14s~NFn-W7y10SYttQs5xRf3fyMLZ2SeT9iwnxlBfMk~MTpuwN0MTYi389btiNsmWFkcClxh40K7-T~MVRSycjsVK-XmBtvX-SN12sW4d0EGFGE8OQRtYkYdfMO0v11xTGQ4AZgYa0BI6yvyWtJu9Hcka4Z9wx7aUdbqBXBwQgDo6bECaZ1TZ-lrwRFHhAkY1alVRNrq1wesm~-rPjlaGoXHu1M3QQFNZWA__&amp;Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"/>
+                  Source="https://www.youtube.com/embed/u31qwQUeGuM"
+                  Visibility="Hidden"/>
+            <vlc:VlcControl x:Name="vlcPlayer" />
         </DockPanel>
     </Grid>
 </Page>

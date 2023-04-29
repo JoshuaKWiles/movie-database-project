@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,8 @@ namespace MovieDatabaseProject
         public MainPage()
         {
             InitializeComponent();
+            string moviename = File.ReadAllText(@"scraper\secretmoviename.txt");
+            movie_title.Text = moviename;
         }
         public void DescriptionNav(int page)
         {

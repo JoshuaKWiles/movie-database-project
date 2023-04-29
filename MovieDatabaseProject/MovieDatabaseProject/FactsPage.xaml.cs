@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,6 +31,8 @@ namespace MovieDatabaseProject
             main.ScreenshotsButton.Background = new SolidColorBrush(Colors.LightGray);
             main.FactsButton.Background = new SolidColorBrush(Colors.Gray);
             main.SimilarButton.Background = new SolidColorBrush(Colors.LightGray);
+            string moviename = File.ReadAllText(@"scraper\secretmoviename.txt");
+            movie_title.Text = moviename + " Facts";
         }
     }
 }
