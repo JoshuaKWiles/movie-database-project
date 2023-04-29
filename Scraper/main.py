@@ -1,10 +1,13 @@
+import concurrent.futures
+
 from bs4 import BeautifulSoup
-import requests
 from urllib.request import Request, urlopen
 from difflib import SequenceMatcher
+from concurrent.futures import ThreadPoolExecutor
 import os
-import re
-import json
+
+global screenshotsoup
+
 
 def googlelink(movienme):
     temp = movienme.replace(" ", "+")
@@ -148,14 +151,55 @@ def getscreenshots(imdbsoup):
     count = 0
     divimg = doublesoup.find('div', class_='media_index_thumb_list')
     for a in divimg('a'):
-        print(a)
-        if len(imagelinks) < 20:
+        if len(imagelinks) < 10:
             try:
                 imagelinks.append('https://www.imdb.com' + a['href'])
             except:
                 break
-    for imagelink in imagelinks:
-        print(imagelink)
+    pentuplethread = []
+    pentuplesoup = []
+    imgtemp = ''
+    with ThreadPoolExecutor() as executor:
+        for y in range(0, len(imagelinks)):
+            pentuplethread.append(executor.submit(buildsoup, imagelinks[y]))
+        for z in pentuplethread:
+            pentuplesoup.append(z.result(timeout=5))
+        for soup in pentuplesoup:
+            for divtwo in soup.select('div', class_='sc-7c0a9e7c-2 kEDMKk'):
+                for img in divtwo('img', class_='sc-7c0a9e7c-0 fEIEer'):
+                    imgtemp = img['src']
+                    break
+                if imgtemp != '':
+                    break
+            allimages.append(imgtemp)
+            imgtemp = ''
+    while '' in allimages:
+        allimages.remove('')
+    return allimages
+
+
+def gettrivia(imdblink):
+    trivia = []
+    tempone = ''
+    triviasoup = buildsoup(imdblink + 'trivia/?ref_=tt_trv_trv')
+    triviasoup = triviasoup.find('div', {'id': 'trivia_content'})
+    soda = triviasoup.find('div', class_='list')
+    count = 0
+    sodas = triviasoup.find_all('div', {'class': 'sodatext'})
+    for s in sodas:
+        if count < 5:
+            trivia.append(s.text.strip())
+        count = count + 1
+    for triv in trivia:
+        triv.replace('/', '')
+    return trivia
+
+
+def getsimilarmovies(imdbsoup):
+    imdbsoup.prettify()
+    print(imdbsoup)
+
+
 #beginning of main
 moviename = 'The Terminator'
 imdblink = getimdblink(moviename)
@@ -167,6 +211,10 @@ imdbsoup = buildsoup(imdblink)
 #actors = getactors(imdbsoup)
 #get movietrailer source, store to string
 #trailer = gettrailer(imdbsoup)
-getscreenshots(imdbsoup)
+#get screenshtos links, store to list
+#screenshot = getscreenshots(imdbsoup)
+#get trivia, store strings in list
+#trivia = gettrivia(imdblink)
+getsimilarmovies()
 
 #with link scrape; description, actors, trailer, screenshots, facts, maybe similar movies? that may require a different site
