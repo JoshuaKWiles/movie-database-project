@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Web.WebView2.Core;
 
 namespace MovieDatabaseProject
 {
@@ -25,7 +26,8 @@ namespace MovieDatabaseProject
         public async void initializewebview()
         {
             await webView.EnsureCoreWebView2Async(null);
-            webView.CoreWebView2.NavigateToString(trailer);
+            //webView.CoreWebView2.Navigate("https://www.youtube.com/embed/u31qwQUeGuM");
+            webView.CoreWebView2.Navigate(trailer);
         }
         public TrailerPage()
         {

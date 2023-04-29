@@ -10,6 +10,8 @@
   <ItemGroup>
     <PackageReference Include="IronPython" Version="3.4.0" />
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1722.45" />
+    <PackageReference Include="Vlc.DotNet.Core" Version="3.1.0" />
+    <PackageReference Include="Vlc.DotNet.Wpf" Version="3.1.0" />
     <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
   </ItemGroup>
 

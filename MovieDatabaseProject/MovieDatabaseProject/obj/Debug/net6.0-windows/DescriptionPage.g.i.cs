@@ -69,7 +69,7 @@ namespace MovieDatabaseProject {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MovieDatabaseProject;V1.0.0.0;component/descriptionpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MovieDatabaseProject;component/descriptionpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\DescriptionPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
