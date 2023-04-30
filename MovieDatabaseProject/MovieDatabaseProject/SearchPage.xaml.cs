@@ -24,10 +24,21 @@ namespace MovieDatabaseProject
     public partial class SearchPage : Page
     {
         bool found = false;
+        private void installpy()
+        {
+            ProcessStartInfo ProcessInfo;
+            Process Process;
+            ProcessInfo = new ProcessStartInfo("CMD.exe", "/C " + "(cd scraper) & (pip install -r requirements.txt)");
+            ProcessInfo.CreateNoWindow = true;
+            ProcessInfo.UseShellExecute = false;
+            Process = Process.Start(ProcessInfo);
+        }
         private void run_cmd(string moviename)
         {
             File.WriteAllText("scraper/moviename.txt", moviename);
             File.WriteAllText("scraper/secretmoviename.txt", moviename);
+
+            installpy();
 
             ProcessStartInfo ProcessInfo;
             Process Process;
