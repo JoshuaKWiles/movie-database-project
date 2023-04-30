@@ -14,6 +14,7 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
             <RowDefinition Height="4*"/>
             <RowDefinition Height="4*"/>
             <RowDefinition Height="4*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*"/>
@@ -25,12 +26,14 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         </Grid.ColumnDefinitions>
 
         <TextBlock x:Name="movie_title" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="*Movie Name* Screenshots" Margin="0,0,0,0"/>
-
-        <Image Name="picHolder" Grid.Column="1" Grid.Row="0" Grid.RowSpan="4" Grid.ColumnSpan="4" Stretch="Uniform" Source="https://www.goway.com/media/cache/38/e9/38e939fb4c5bc42de16322f121644cbc.jpg" VerticalAlignment="Center" Margin="0 50"
+        <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0 0 0 0">
+            <Image Name="picHolder" Stretch="Uniform" Source="https://www.goway.com/media/cache/38/e9/38e939fb4c5bc42de16322f121644cbc.jpg" VerticalAlignment="Top"
                ScrollViewer.VerticalScrollBarVisibility="Disabled" />
-
-        <Button Name="btnBack" Click="GoBack" Grid.Column="1" Width="150" HorizontalAlignment="Left" Grid.Row="3" Height="35">Back</Button>
-        <Button Name="btnNext" Click="GoNext" Grid.Column="4" Width="150" HorizontalAlignment="Right" Grid.Row="3" Height="35">Next</Button>
+        </StackPanel>
+        
+        
+        <Button Name="btnBack" Click="GoBack" Grid.Column="1" Width="150" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="4" Height="35" Margin="0 5">Back</Button>
+        <Button Name="btnNext" Click="GoNext" Grid.Column="4" Width="150" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="4" Height="35" Margin="0 5">Next</Button>
         
     </Grid>
 </Page>

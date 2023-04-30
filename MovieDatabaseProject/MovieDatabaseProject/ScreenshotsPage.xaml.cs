@@ -22,9 +22,11 @@ namespace MovieDatabaseProject
     public partial class ScreenshotsPage : Page
     {
         string[] imageAddresses = { };
+        ImageSourceConverter imgs = new ImageSourceConverter();
         public ScreenshotsPage()
         {
             InitializeComponent();
+            getImages();
             var main = App.Current.MainWindow as MainWindow;
             main.DescriptionButton.Background = new SolidColorBrush(Colors.LightGray);
             main.ActorsButton.Background = new SolidColorBrush(Colors.LightGray);
@@ -32,8 +34,11 @@ namespace MovieDatabaseProject
             main.ScreenshotsButton.Background = new SolidColorBrush(Colors.Gray);
             main.FactsButton.Background = new SolidColorBrush(Colors.LightGray);
             main.SimilarButton.Background = new SolidColorBrush(Colors.LightGray);
-            //getImages();
+
+            
+
             string moviename = File.ReadAllText(@"scraper\secretmoviename.txt");
+            picHolder.SetValue(Image.SourceProperty, imgs.ConvertFromString(imageAddresses[0]));
             movie_title.Text = moviename + " Screenshots";
 
         }
@@ -43,11 +48,11 @@ namespace MovieDatabaseProject
         private void GoBack(object sender, RoutedEventArgs e)
         {
             i--;
-            if (i < 1)
+            if (i < 0)
             {
                 i = 9;
             }
-            picHolder.Source = new BitmapImage(new Uri(imageAddresses[i], UriKind.Relative));
+            picHolder.SetValue(Image.SourceProperty, imgs.ConvertFromString(imageAddresses[i]));
         }
 
         private void GoNext(object sender, RoutedEventArgs e)
@@ -55,25 +60,21 @@ namespace MovieDatabaseProject
             i++;
             if (i > 9)
             {
-                i = 1;
+                i = 0;
             }
-            picHolder.Source = new BitmapImage(new Uri(imageAddresses[i], UriKind.Relative));
+            picHolder.SetValue(Image.SourceProperty, imgs.ConvertFromString(imageAddresses[i]));
         }
         public void getImages()
         {
-            using (var reader = new StreamReader("scraper\\screenshots.csv"))
+            string[] images = new string[10];
+            var lines = File.ReadLines("scraper\\screenshots.txt");
+            int count = 0;
+            foreach (string line in lines)
             {
-                while (!reader.EndOfStream)
-                {
-                    var line = reader.ReadLine();
-                    var values = line.Split(',');
-
-                    foreach (string value in values)
-                    {
-                        imageAddresses.Append(value);
-                    };
-                }
+                images[count] = line;
+                count++;
             }
+            imageAddresses = images;
         }
     }
 }

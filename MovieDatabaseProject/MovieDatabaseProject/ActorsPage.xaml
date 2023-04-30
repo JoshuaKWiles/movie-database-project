@@ -32,46 +32,60 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         ****NOTE: RECOMMENDED IMAGE RATIO IS 7 x 5, IMAGES NOT IN THIS RATIO WILL LOOK STUPID
         
         -->
+        <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*" /> 
+                <RowDefinition Height="*" /> 
+                <RowDefinition Height="5*" /> 
+                <RowDefinition Height="*" /> 
+            </Grid.RowDefinitions>
+            <StackPanel x:Name="actor1" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
+                <Image x:Name="actor1Photo" Source="https://www.thefamouspeople.com/profiles/thumbs/ryan-reynolds-5.jpg" MaxHeight="400px" Stretch="Uniform" />
+                <TextBlock x:Name="actor1Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Ryan Reynolds" Foreground="White" MaxHeight="20px"/>
+            </StackPanel>
 
-        <StackPanel x:Name="actor1" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
-            <Image x:Name="actor1Photo" Source="https://www.thefamouspeople.com/profiles/thumbs/ryan-reynolds-5.jpg" MaxHeight="400px" Height="100px" Stretch="UniformToFill" />
-            <TextBlock x:Name="actor1Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Ryan Reynolds" Foreground="White" MaxHeight="20px"/>
-        </StackPanel>
+            <StackPanel x:Name="actor2" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
+                <Image x:Name="actor2Photo" Source="https://www.thefamouspeople.com/profiles/thumbs/harrison-ford-2.jpg" MaxHeight="400px" Stretch="Uniform"/>
+                <TextBlock x:Name="actor2Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Harrison Ford" Foreground="White" MaxHeight="20px" TextWrapping="Wrap"/>
+            </StackPanel>
 
-        <StackPanel x:Name="actor2" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
-            <Image x:Name="actor2Photo" Source="https://www.thefamouspeople.com/profiles/thumbs/harrison-ford-2.jpg" MaxHeight="400px" Height="100px" Stretch="Fill"/>
-            <TextBlock x:Name="actor2Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Harrison Ford" Foreground="White" MaxHeight="20px"/>
-        </StackPanel>
+            <StackPanel x:Name="actor3" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
+                <Image x:Name="actor3Photo" Source="https://www.thefamouspeople.com/profiles/thumbs/halle-berry-3.jpg" MaxHeight="400px" Stretch="Uniform"/>
+                <TextBlock x:Name="actor3Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Halle Berry" Foreground="White" MaxHeight="20px"/>
+            </StackPanel>
 
-        <StackPanel x:Name="actor3" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
-            <Image x:Name="actor3Photo" Source="https://www.thefamouspeople.com/profiles/thumbs/halle-berry-3.jpg" MaxHeight="400px" Height="100px" Stretch="Fill"/>
-            <TextBlock x:Name="actor3Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Halle Berry" Foreground="White" MaxHeight="20px"/>
-        </StackPanel>
+            <StackPanel x:Name="actor4" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
+                <Image x:Name="actor4Photo" Source="https://www.thefamouspeople.com/profiles/thumbs/nicolas-cage-3.jpg" MaxHeight="400px" Stretch="Uniform"/>
+                <TextBlock x:Name="actor4Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Nicolas Cage" Foreground="White" MaxHeight="20px"/>
+            </StackPanel>
 
-        <StackPanel x:Name="actor4" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
-            <Image x:Name="actor4Photo" Source="https://www.thefamouspeople.com/profiles/thumbs/nicolas-cage-3.jpg" MaxHeight="400px" Height="100px" Stretch="Fill"/>
-            <TextBlock x:Name="actor4Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Nicolas Cage" Foreground="White" MaxHeight="20px"/>
-        </StackPanel>
+            <StackPanel x:Name="actor5" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
+                <Image x:Name="actor5Photo" Source="https://www.thefamouspeople.com/profiles/thumbs/emma-stone.jpg" MaxHeight="400px" Stretch="Uniform"/>
+                <TextBlock x:Name="actor5Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Emma Stone" Foreground="White" MaxHeight="20px"/>
+            </StackPanel>
 
-        <StackPanel x:Name="actor5" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
-            <Image x:Name="actor5Photo" Source="https://www.thefamouspeople.com/profiles/thumbs/emma-stone.jpg" MaxHeight="400px" Height="100px" Stretch="Fill"/>
-            <TextBlock x:Name="actor5Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Emma Stone" Foreground="White" MaxHeight="20px"/>
-        </StackPanel>
+            <StackPanel x:Name="actor6" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
+                <Image x:Name="actor6Photo" Source="https://www.thefamouspeople.com/profiles/thumbs/marlon-brando-9.jpg" MaxHeight="400px" Stretch="Uniform"/>
+                <TextBlock x:Name="actor6Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Marlon Brando" Foreground="White" MaxHeight="20px"/>
+            </StackPanel>
 
-        <StackPanel x:Name="actor6" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
-            <Image x:Name="actor6Photo" Source="https://www.thefamouspeople.com/profiles/thumbs/marlon-brando-9.jpg" MaxHeight="400px" Height="100px" Stretch="Fill"/>
-            <TextBlock x:Name="actor6Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Marlon Brando" Foreground="White" MaxHeight="20px"/>
-        </StackPanel>
+            <StackPanel x:Name="actor7" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
+                <Image x:Name="actor7Photo" Source="https://www.thefamouspeople.com/profiles/thumbs/danny-devito-4.jpg" MaxHeight="400px" Stretch="Uniform"/>
+                <TextBlock x:Name="actor7Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Danny Devito" Foreground="White" MaxHeight="20px"/>
+            </StackPanel>
 
-        <StackPanel x:Name="actor7" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
-            <Image x:Name="actor7Photo" Source="https://www.thefamouspeople.com/profiles/thumbs/danny-devito-4.jpg" MaxHeight="400px" Height="100px" Stretch="Fill"/>
-            <TextBlock x:Name="actor7Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Danny Devito" Foreground="White" MaxHeight="20px"/>
-        </StackPanel>
-
-        <StackPanel x:Name="actor8" Grid.Row="2" Grid.Column="4" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
-            <Image x:Name="actor8Photo" Source="https://www.thefamouspeople.com/profiles/thumbs/betty-white-1.jpg" MaxHeight="400px" Height="100px" Stretch="Fill"/>
-            <TextBlock x:Name="actor8Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Betty White" Foreground="White" MaxHeight="20px"/>
-        </StackPanel>
+            <StackPanel x:Name="actor8" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Stretch" Background="DimGray" Margin="5 0 5 0">
+                <Image x:Name="actor8Photo" Source="https://www.thefamouspeople.com/profiles/thumbs/betty-white-1.jpg" MaxHeight="400px" Stretch="Uniform"/>
+                <TextBlock x:Name="actor8Name" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Betty White" Foreground="White" MaxHeight="20px"/>
+            </StackPanel>
+        </Grid>
+        
 
     </Grid>
 </Page>
