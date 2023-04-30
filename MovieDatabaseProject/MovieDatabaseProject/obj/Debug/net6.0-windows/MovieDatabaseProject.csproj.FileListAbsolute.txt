@@ -147,3 +147,4 @@ C:\Users\kingj\source\repos\movie-database-project\MovieDatabaseProject\MovieDat
 C:\Users\kingj\source\repos\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\obj\Debug\net6.0-windows\ref\MovieDatabaseProject.dll
 C:\Users\kingj\source\repos\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\obj\Debug\net6.0-windows\MovieDatabaseProject.pdb
 C:\Users\kingj\source\repos\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\obj\Debug\net6.0-windows\MovieDatabaseProject.genruntimeconfig.cache
+C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\obj\Debug\net6.0-windows\MovieDatabaseProject.csproj.AssemblyReference.cache

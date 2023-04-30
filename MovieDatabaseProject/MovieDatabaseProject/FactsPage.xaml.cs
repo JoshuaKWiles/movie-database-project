@@ -33,6 +33,25 @@ namespace MovieDatabaseProject
             main.SimilarButton.Background = new SolidColorBrush(Colors.LightGray);
             string moviename = File.ReadAllText(@"scraper\secretmoviename.txt");
             movie_title.Text = moviename + " Facts";
+
+            getFacts();
+        }
+        
+        public void getFacts()
+        {
+            string[] facts = { "", "", "", "", ""};
+            var lines = File.ReadLines("scraper\\trivia.txt");
+            int count = 0;
+            foreach (string line in lines)
+            {
+                facts[count] = "-" + line + "\n";
+                count++;
+            }
+            fact1.Text = facts[0];
+            fact2.Text = facts[1];
+            fact3.Text = facts[2];
+            fact4.Text = facts[3];
+            fact5.Text = facts[4];
         }
     }
 }

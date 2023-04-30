@@ -39,6 +39,19 @@ def getimdblink(movienme):
     return imdblink
 
 
+def getshortdescription(imdbsoup):
+    desc = ''
+    for p in imdbsoup.select('p', class_='sc-5f699a2-3 lopbTB'):
+        if p.find('span', {'class', 'sc-5f699a2-0 kcphyk'}) != 'None':
+            desc = p.find('span', {'class', 'sc-5f699a2-0 kcphyk'})
+        if p.find('span', {'class', 'sc-5f699a2-1 cfkOAP'}) != 'None':
+            desc = p.find('span', {'class', 'sc-5f699a2-1 cfkOAP'})
+        if p.find('span', {'class', 'sc-5f699a2-2 cxqNYC'}) != 'None':
+            desc = p.find('span', {'class', 'sc-5f699a2-2 cxqNYC'})
+        if desc != '':
+            return desc.text
+
+
 def getdescription(imdbsoup, imdblink):
     imdbsoup.prettify()
     result = []
@@ -52,10 +65,11 @@ def getdescription(imdbsoup, imdblink):
             for divone in doublesoup.select('div', class_='sc-f65f65be-0 fVkLRr'):
                 for divtwo in divone('div', class_='ipc-html-content-inner-div'):
                     result.append(divtwo.text)
-    try:
+    if len(result) != 0:
         return(result[len(result) - 1])
-    except:
-        return 'FIX ME'
+    else:
+        return getshortdescription(imdbsoup)
+
 
 
 def getactors(imdbsoup):
@@ -147,7 +161,7 @@ def getscreenshots(imdbsoup):
     count = 0
     divimg = doublesoup.find('div', class_='media_index_thumb_list')
     for a in divimg('a'):
-        if len(imagelinks) < 20:
+        if len(imagelinks) < 10:
             try:
                 imagelinks.append('https://www.imdb.com' + a['href'])
             except:
@@ -159,16 +173,17 @@ def getscreenshots(imdbsoup):
         for y in range(0, len(imagelinks)):
             pentuplethread.append(executor.submit(buildsoup, imagelinks[y]))
         for z in pentuplethread:
-            pentuplesoup.append(z.result(timeout=8))
+            pentuplesoup.append(z.result())
         for soup in pentuplesoup:
-            for divtwo in soup.select('div', class_='sc-7c0a9e7c-2 kEDMKk'):
-                for img in divtwo('img', class_='sc-7c0a9e7c-0 fEIEer'):
+            count = 0
+            for img in soup('img'):
+                if count == 1:
                     imgtemp = img['src']
                     break
-                if imgtemp != '':
-                    break
+                count = count + 1
             allimages.append(imgtemp)
             imgtemp = ''
+
     while '' in allimages:
         allimages.remove('')
     return allimages
@@ -192,15 +207,26 @@ def gettrivia(imdblink):
 
 def getsimilarmovies(imdbsoup):
     imdbsoup.prettify()
-    similar_movies = []
+    similarmovies = []
+    similarmovietitles = []
+    similarmovieimages = []
     movies = imdbsoup.find_all('span', {'data-testid': 'title'})
     for x in range(0, 3):
-        similar_movies.append(movies[x].text)
-    return similar_movies
+        similarmovietitles.append(movies[x].text)
+    movies = []
+    for divone in imdbsoup.find_all('div', {'class': "ipc-media ipc-media--poster-27x40 ipc-image-media-ratio--poster-27x40 ipc-media--base ipc-media--poster-m ipc-poster__poster-image poster-card-image ipc-media__img"}):
+        movies.append(divone.find('img')['src'])
+        if len(movies) == 3:
+            break
+    for x in range(0, 3):
+        similarmovieimages.append(movies[x])
+    for x in range(0, 3):
+        similarmovies.append(similarmovieimages[x])
+        similarmovies.append(similarmovietitles[x])
+    return similarmovies
 
 
 #beginning of main
-
 with open('moviename.txt', 'r') as files:
     moviename = files.readline()
 
@@ -268,7 +294,12 @@ with open('trivia.txt', 'w') as files:
 
 with open('similarmovies.txt', 'w') as files:
     for x in range(0, len(similarmovies)):
-        files.write(similarmovies[x] + '\n')
+        if x % 2 == 0:
+            temp = similarmovies[x]
+        if x % 2 == 1:
+            temp = temp + '|' + similarmovies[x]
+            files.write(temp + '\n')
+            temp = ''
 
 os.remove('moviename.txt')
 

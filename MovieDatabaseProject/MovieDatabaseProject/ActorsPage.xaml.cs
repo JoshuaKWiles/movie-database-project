@@ -95,7 +95,7 @@ namespace MovieDatabaseProject
                 actors[count] = values[1];
                 count++;
             }
-            actor1Name.Text = images.Length.ToString();
+            
             actorimages = images;
             actornames = actors;
         }
