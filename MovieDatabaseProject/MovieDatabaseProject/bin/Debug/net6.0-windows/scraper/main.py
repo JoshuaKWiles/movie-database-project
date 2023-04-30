@@ -108,7 +108,7 @@ def gettrailer(imdbsoup):
     counter = 0
     soupfinal = vidlink
     vidlink = ''
-    for script in soupfinal.select('script', id_='__NEXT_DATA__'):
+    for script in soupfinal.find_all('script', {'id', '__NEXT_DATA__'}):
         script.prettify()
         if counter == 69:
             parts = str(script).split(',')
