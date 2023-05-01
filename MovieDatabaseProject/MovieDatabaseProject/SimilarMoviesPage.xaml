@@ -24,7 +24,7 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock x:Name="movie_title" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="Similar Movies" Margin="0,0,0,0"/>
+        <TextBlock x:Name="movie_title" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="Similar Movies" Margin="0,0,0,0"/>
 
         <Grid Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="4" Margin="0,96,0,20">
             <Grid.ColumnDefinitions>
@@ -33,18 +33,30 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <StackPanel x:Name="movie1" Grid.Row="0" Grid.Column="0" Background="DimGray" Margin="5,0,5,0">
-                <Image x:Name="movie1Photo" Source="https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg" MaxHeight="400px" Stretch="Uniform"/>
-                <TextBlock x:Name="movie1Name" FontWeight="Bold" HorizontalAlignment="Center" Text="The Shawshank Redemption" Foreground="White" FontSize="18" TextWrapping="Wrap" TextAlignment="Center"/>
+                <Button Background="DimGray" Click="New_Search1_Click" VerticalAlignment="Stretch" Height="auto">
+                    <StackPanel Height="auto">
+                        <Image x:Name="movie1Photo" Source="https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg" MaxHeight="400px" Stretch="Uniform"/>
+                        <TextBlock x:Name="movie1Name" FontWeight="Bold" HorizontalAlignment="Center" Text="The Shawshank Redemption" Foreground="White" FontSize="18" TextWrapping="Wrap" TextAlignment="Center"/>
+                    </StackPanel>
+                </Button>
             </StackPanel>
 
             <StackPanel x:Name="movie2" Grid.Row="0" Grid.Column="1" Background="DimGray" Margin="5,0,5,0">
-                <Image x:Name="movie2Photo" Source="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg" MaxHeight="400px" Stretch="Uniform"/>
-                <TextBlock x:Name="movie2Name" FontWeight="Bold" HorizontalAlignment="Center" Text="Inception" Foreground="White" FontSize="18" TextWrapping="Wrap" TextAlignment="Center"/>
+                <Button Background="DimGray" Click="New_Search2_Click" VerticalAlignment="Stretch" Height="auto">
+                    <StackPanel Height="auto">
+                        <Image x:Name="movie2Photo" Source="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg" MaxHeight="400px" Stretch="Uniform"/>
+                        <TextBlock x:Name="movie2Name" FontWeight="Bold" HorizontalAlignment="Center" Text="Inception" Foreground="White" FontSize="18" TextWrapping="Wrap" TextAlignment="Center"/>
+                    </StackPanel>
+                </Button>
             </StackPanel>
 
             <StackPanel x:Name="movie3" Grid.Row="0" Grid.Column="2" Background="DimGray" Margin="5,0,5,0">
-                <Image x:Name="movie3Photo" Source="https://m.media-amazon.com/images/M/MV5BZjhkMDM4MWItZTVjOC00ZDRhLThmYTAtM2I5NzBmNmNlMzI1XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_.jpg" MaxHeight="400px" Stretch="Uniform"/>
-                <TextBlock x:Name="movie3Name" FontWeight="Bold" HorizontalAlignment="Center" Text="Saving Private Ryan" Foreground="White" FontSize="18" TextWrapping="Wrap" TextAlignment="Center"/>
+                <Button Background="DimGray" Click="New_Search3_Click" VerticalAlignment="Stretch" Height="auto">
+                    <StackPanel Height="auto">
+                        <Image x:Name="movie3Photo" Source="https://m.media-amazon.com/images/M/MV5BZjhkMDM4MWItZTVjOC00ZDRhLThmYTAtM2I5NzBmNmNlMzI1XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_.jpg" MaxHeight="400px" Stretch="Uniform"/>
+                        <TextBlock x:Name="movie3Name" FontWeight="Bold" HorizontalAlignment="Center" Text="Saving Private Ryan" Foreground="White" FontSize="18" TextWrapping="Wrap" TextAlignment="Center"/>
+                    </StackPanel>
+                </Button>
             </StackPanel>
         </Grid>
 

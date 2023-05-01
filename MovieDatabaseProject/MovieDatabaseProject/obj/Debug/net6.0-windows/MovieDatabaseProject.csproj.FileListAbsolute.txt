@@ -69,9 +69,6 @@ C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabas
 C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Debug\net6.0-windows\runtimes\osx-x64\native\libMono.Unix.dylib
 C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Debug\net6.0-windows\runtimes\tvos-arm64\native\libMono.Unix.a
 C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Debug\net6.0-windows\runtimes\tvossimulator-x64\native\libMono.Unix.a
-C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Debug\net6.0-windows\Vlc.DotNet.Core.dll
-C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Debug\net6.0-windows\Vlc.DotNet.Core.Interops.dll
-C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Debug\net6.0-windows\Vlc.DotNet.Wpf.dll
 C:\Users\kingj\source\repos\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Debug\net6.0-windows\runtimes\win-x86\native\WebView2Loader.dll
 C:\Users\kingj\source\repos\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Debug\net6.0-windows\runtimes\win-x64\native\WebView2Loader.dll
 C:\Users\kingj\source\repos\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Debug\net6.0-windows\runtimes\win-arm64\native\WebView2Loader.dll

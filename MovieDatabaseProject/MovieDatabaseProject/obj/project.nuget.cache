@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "efLizmUZphs0QlrqeBZ2unroEcd6cVQKTPVf1At5tNbjfwbV0TtGXP4U9qqlfM+RDIz/vxObRjMPV7AkTitN0w==",
+  "dgSpecHash": "04uxosqrqccFUo+jLirS8j/C0qKkf5uvsd3U0VIJvtvw9ecKByjnb45WAuwwSYKhkm7Hoir+068Q841gA5TMUA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Josh\\Documents\\MovieDatabaseProject\\movie-database-project\\MovieDatabaseProject\\MovieDatabaseProject\\MovieDatabaseProject.csproj",
   "expectedPackageFiles": [
@@ -9,9 +9,6 @@
     "C:\\Users\\Josh\\.nuget\\packages\\microsoft.web.webview2\\1.0.1722.45\\microsoft.web.webview2.1.0.1722.45.nupkg.sha512",
     "C:\\Users\\Josh\\.nuget\\packages\\mono.unix\\7.1.0-final.1.21458.1\\mono.unix.7.1.0-final.1.21458.1.nupkg.sha512",
     "C:\\Users\\Josh\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
-    "C:\\Users\\Josh\\.nuget\\packages\\vlc.dotnet.core\\3.1.0\\vlc.dotnet.core.3.1.0.nupkg.sha512",
-    "C:\\Users\\Josh\\.nuget\\packages\\vlc.dotnet.core.interops\\3.1.0\\vlc.dotnet.core.interops.3.1.0.nupkg.sha512",
-    "C:\\Users\\Josh\\.nuget\\packages\\vlc.dotnet.wpf\\3.1.0\\vlc.dotnet.wpf.3.1.0.nupkg.sha512",
     "C:\\Users\\Josh\\.nuget\\packages\\wpfanimatedgif\\2.0.2\\wpfanimatedgif.2.0.2.nupkg.sha512"
   ],
   "logs": []

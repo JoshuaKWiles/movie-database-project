@@ -13,7 +13,8 @@ def googlelink(movienme):
 
 
 def buildsoup(link):
-    req = Request(link, headers={'User-Agent': 'Mozilla/5.0'})
+    #req = Request(link, headers={'User-Agent': 'Mozilla/5.0'})
+    req = Request(link, headers={'User-Agent': 'your bot 0.1'})
     webpage = urlopen(req).read()
     soup = BeautifulSoup(webpage, "html.parser")
     return soup
@@ -37,6 +38,13 @@ def getimdblink(movienme):
     except:
         return getimdblink(movienme + " imdb")
     return imdblink
+
+
+def get_source(url):
+    req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+    webpage = urlopen(req).read()
+    soup = BeautifulSoup(webpage, "html.parser")
+    return soup
 
 
 def getshortdescription(imdbsoup):
@@ -93,55 +101,25 @@ def getactors(imdbsoup):
     return combined
 
 
-def gettrailer(imdbsoup):
-    imdbsoup.prettify()
-    extension = ''
-    vidlink = ''
-    for divone in imdbsoup.select('div', class_='sc-385ac629-9 jiVoNU'):
-        for a in divone('a', class_='ipc-btn ipc-btn--single-padding ipc-btn--center-align-content ipc-btn--default-height ipc-btn--core-baseAlt ipc-btn--theme-baseAlt ipc-btn--on-onBase ipc-secondary-button sc-f81a065-3 wHRmg'):
-            if 'videogallery' in str(a['href']):
-                extension = 'https://www.imdb.com/' + str(a['href'])
-                splitlink = extension.split('?')
-                extension = splitlink[0] + '/content_type-trailer/?' + splitlink[1]
-                doublesoup = buildsoup(extension)
-                doublesoup.prettify()
-                for divtwo in doublesoup.select('div', class_='results-item slate'):
-                    for atwo in divtwo('a', class_='video-modal'):
-                        extension = atwo['href']
-                        extension = extension[12:]
-                        extension = 'https://www.imdb.com/video' + extension
-                        splitatmark = extension.split('?')
-                        extension = str(splitatmark[0]) + '/?' + str(splitatmark[1])
-                        triplesoup = buildsoup(extension)
-                        vidlink = triplesoup
-                        break
-                    if vidlink != '':
-                        break
-            if vidlink != '':
-                break
-    counter = 0
-    soupfinal = vidlink
-    vidlink = ''
-    for script in soupfinal.find_all('script', {'id', '__NEXT_DATA__'}):
-        script.prettify()
-        if counter == 69:
-            parts = str(script).split(',')
-            counter = 0
-            for part in parts:
-                if counter == 18:
-                    vidlink = part[7:]
-                    try:
-                        splitagain = vidlink.split(r'\u0026')
-                        vidlink = splitagain[0] + '&amp;' + splitagain[1] + '&amp;' + splitagain[2]
-                        vidlink = vidlink[:-1]
-                    except:
-                        vidlink = 'NULL'
-                    break
-                counter = counter + 1
-        counter = counter + 1
-        if vidlink != '':
-            break
-    return vidlink
+def gettrailer(moviename, iternum):
+    if moviename[0] == ' ':
+        moviename = moviename[1:]
+    if moviename[len(moviename) - 1] == ' ':
+        moviename = moviename[:-1]
+    moviename = moviename.replace(' ', '+')
+    soup = get_source('https://www.youtube.com/results?search_query=' + moviename + '+trailer')
+    soup = soup.prettify()
+    ind = soup.find(r'{"contents":[{"videoRenderer":{"videoId":')
+    videoid = soup[ind + 42:ind + 53]
+    if ind == -1:
+        print('hi')
+        if iternum == 20:
+            return '-1'
+        videoid = gettrailer(moviename, iternum + 1)
+    link = 'https://www.youtube.com/embed/' + videoid
+    if len(link) > 45:
+        link = link[42:]
+    return link
 
 
 def getscreenshots(imdbsoup):
@@ -237,7 +215,7 @@ mainthread = []
 with ThreadPoolExecutor() as executor:
     mainthread.append(executor.submit(getdescription, imdbsoup, imdblink))
     mainthread.append(executor.submit(getactors, imdbsoup))
-    mainthread.append(executor.submit(gettrailer, imdbsoup))
+    mainthread.append(executor.submit(gettrailer, moviename, 0))
     mainthread.append(executor.submit(getscreenshots, imdbsoup))
     mainthread.append(executor.submit(gettrivia, imdblink))
     mainthread.append(executor.submit(getsimilarmovies, imdbsoup))

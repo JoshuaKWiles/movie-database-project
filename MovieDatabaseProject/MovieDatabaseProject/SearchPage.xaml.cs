@@ -24,6 +24,9 @@ namespace MovieDatabaseProject
     public partial class SearchPage : Page
     {
         bool found = false;
+        bool searchrunning = false;
+        bool error = false;
+        int counter = 0;
         private void installpy()
         {
             ProcessStartInfo ProcessInfo;
@@ -50,6 +53,26 @@ namespace MovieDatabaseProject
         public SearchPage()
         {
             InitializeComponent();
+
+            searchbar.Visibility = Visibility.Visible;
+            searchbutton.Visibility = Visibility.Visible;
+            title.Visibility = Visibility.Visible;
+            instructions.Visibility = Visibility.Visible;
+
+            loadinggif.Visibility = Visibility.Hidden;
+            loadingmessage.Visibility = Visibility.Hidden;
+
+            if (searchrunning)
+            {
+
+                searchbar.Visibility = Visibility.Hidden;
+                searchbutton.Visibility = Visibility.Hidden;
+                title.Visibility = Visibility.Hidden;
+                instructions.Visibility = Visibility.Hidden;
+
+                loadinggif.Visibility = Visibility.Visible;
+                loadingmessage.Visibility = Visibility.Visible;
+            }
             var main = App.Current.MainWindow as MainWindow;
         }
         public void DescriptionNav(int page)
@@ -57,18 +80,34 @@ namespace MovieDatabaseProject
             var main = App.Current.MainWindow as MainWindow;
             main.navigate(page);
         }
+        public void showerror()
+        {
+                searchbar.Text = "";
+                searchbar.Foreground = Brushes.Black;
+                searchbar.FontWeight = FontWeights.Regular;     
+        }
         public void loading()
         {
+            
             if (File.Exists("scraper/moviename.txt"))
             {
+                if(counter == 100)
+                {
+                    error = true;
+                    return;
+                }
                 Thread.Sleep(200);
+                counter++;
                 loading();
             }
             found = true;
         }
-        public async void search()
+        public async void search(string moviename)
         {
-            string moviename = searchbar.Text;
+            searchrunning = true;
+
+            InitializeComponent();
+
             if (moviename == "")
             {
                 return;
@@ -86,6 +125,8 @@ namespace MovieDatabaseProject
             var t = Task.Run(() => loading());
             await t;
 
+
+
             searchbar.Visibility = Visibility.Visible;
             searchbutton.Visibility = Visibility.Visible;
             title.Visibility = Visibility.Visible;
@@ -93,13 +134,32 @@ namespace MovieDatabaseProject
 
             loadinggif.Visibility = Visibility.Hidden;
             loadingmessage.Visibility = Visibility.Hidden;
+            
+            if (error)
+            {
+                error = false;
+                
+                searchbar.Foreground = Brushes.Red;
+                searchbar.FontWeight = FontWeights.Bold;
+                searchbar.Text = "ERROR, MOVIE NOT FOUND!";
+                System.Windows.Threading.DispatcherTimer timer = new System.Windows.Threading.DispatcherTimer();
+                timer.Interval = TimeSpan.FromSeconds(3);
+                timer.Tick += (s, en) => {
+                    showerror();
+                    timer.Stop();
+                };
+                timer.Start();
+                return;
+            }
+
+            searchrunning = false;
 
             DescriptionNav(7);
-            
         }
         private void search_button_Click(object sender, RoutedEventArgs e)
         {
-            search();
+            string moviename = searchbar.Text;
+            search(moviename);
         }
     }
 }
