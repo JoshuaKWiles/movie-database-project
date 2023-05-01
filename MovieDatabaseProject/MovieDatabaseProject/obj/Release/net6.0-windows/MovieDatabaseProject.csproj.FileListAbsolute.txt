@@ -18,9 +18,6 @@ C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabas
 C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Release\net6.0-windows\Microsoft.Web.WebView2.WinForms.dll
 C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Release\net6.0-windows\Microsoft.Web.WebView2.Wpf.dll
 C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Release\net6.0-windows\Mono.Unix.dll
-C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Release\net6.0-windows\Vlc.DotNet.Core.dll
-C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Release\net6.0-windows\Vlc.DotNet.Core.Interops.dll
-C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Release\net6.0-windows\Vlc.DotNet.Wpf.dll
 C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Release\net6.0-windows\WpfAnimatedGif.dll
 C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Release\net6.0-windows\runtimes\android-arm\native\libMono.Unix.so
 C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Release\net6.0-windows\runtimes\android-arm64\native\libMono.Unix.so
@@ -72,3 +69,4 @@ C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabas
 C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\obj\Release\net6.0-windows\ref\MovieDatabaseProject.dll
 C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\obj\Release\net6.0-windows\MovieDatabaseProject.pdb
 C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\obj\Release\net6.0-windows\MovieDatabaseProject.genruntimeconfig.cache
+C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\obj\Release\net6.0-windows\MovieDatabaseProject.csproj.AssemblyReference.cache

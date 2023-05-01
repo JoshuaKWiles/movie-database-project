@@ -40,8 +40,26 @@ namespace MovieDatabaseProject
         {
             InitializeComponent();
             error.Visibility = Visibility.Hidden;
-            initializewebview();
             getTrailer();
+            try
+            {
+                
+                initializewebview();      
+            }
+            catch
+            {
+                if (!(trailer[trailer.Length - 1] == 1))
+                {
+                    webView.Visibility= Visibility.Hidden;
+                    error.Visibility = Visibility.Visible;
+                    error.Text = "Trailer Found, error with Microsoft Web View 2. Watch trailer ";
+                }
+                else
+                {
+                    error.Text = "Trailer Not Found, error with Microsoft Web View 2.";
+                }
+            }
+           
             var main = App.Current.MainWindow as MainWindow;
             main.DescriptionButton.Background = new SolidColorBrush(Colors.LightGray);
             main.ActorsButton.Background = new SolidColorBrush(Colors.LightGray);
@@ -58,6 +76,10 @@ namespace MovieDatabaseProject
         {
             string trail = File.ReadAllText("scraper\\trailer.txt");
             trailer = trail;
+        }
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            System.Diagnostics.Process.Start(trailer);
         }
     }
 }

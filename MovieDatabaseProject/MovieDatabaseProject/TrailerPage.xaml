@@ -31,6 +31,13 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
             <wv2:WebView2 Name="webView"
                   Visibility="Visible"/>
         </DockPanel>
-        <TextBlock Name="error" Visibility="Hidden" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="error"/>
+        <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <TextBlock Name="error" Visibility="Hidden">
+                error
+                <Hyperlink Name="errorlink" NavigateUri="https://www.youtube.com/embed/u31qwQUeGuM" RequestNavigate="Hyperlink_RequestNavigate" >Here</Hyperlink>
+            </TextBlock>
+            
+        </StackPanel>
+        
     </Grid>
 </Page>
