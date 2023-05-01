@@ -89,9 +89,6 @@ C:\Users\kingj\source\repos\movie-database-project\MovieDatabaseProject\MovieDat
 C:\Users\kingj\source\repos\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Debug\net6.0-windows\Microsoft.Web.WebView2.WinForms.dll
 C:\Users\kingj\source\repos\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Debug\net6.0-windows\Microsoft.Web.WebView2.Wpf.dll
 C:\Users\kingj\source\repos\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Debug\net6.0-windows\Mono.Unix.dll
-C:\Users\kingj\source\repos\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Debug\net6.0-windows\Vlc.DotNet.Core.dll
-C:\Users\kingj\source\repos\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Debug\net6.0-windows\Vlc.DotNet.Core.Interops.dll
-C:\Users\kingj\source\repos\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Debug\net6.0-windows\Vlc.DotNet.Wpf.dll
 C:\Users\kingj\source\repos\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Debug\net6.0-windows\WpfAnimatedGif.dll
 C:\Users\kingj\source\repos\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Debug\net6.0-windows\runtimes\android-arm\native\libMono.Unix.so
 C:\Users\kingj\source\repos\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Debug\net6.0-windows\runtimes\android-arm64\native\libMono.Unix.so

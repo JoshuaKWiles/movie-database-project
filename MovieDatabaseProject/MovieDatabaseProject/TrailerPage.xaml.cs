@@ -41,13 +41,10 @@ namespace MovieDatabaseProject
             InitializeComponent();
             error.Visibility = Visibility.Hidden;
             getTrailer();
-            try
-            {
-                
-                initializewebview();      
-            }
-            catch
-            {
+
+                initializewebview();
+
+            /*
                 if (!(trailer[trailer.Length - 1] == 1))
                 {
                     webView.Visibility= Visibility.Hidden;
@@ -58,8 +55,9 @@ namespace MovieDatabaseProject
                 {
                     error.Text = "Trailer Not Found, error with Microsoft Web View 2.";
                 }
-            }
-           
+            */
+
+
             var main = App.Current.MainWindow as MainWindow;
             main.DescriptionButton.Background = new SolidColorBrush(Colors.LightGray);
             main.ActorsButton.Background = new SolidColorBrush(Colors.LightGray);

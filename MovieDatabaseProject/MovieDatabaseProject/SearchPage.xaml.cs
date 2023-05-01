@@ -91,7 +91,7 @@ namespace MovieDatabaseProject
             
             if (File.Exists("scraper/moviename.txt"))
             {
-                if(counter == 100)
+                if(counter == 200)
                 {
                     error = true;
                     return;
@@ -150,6 +150,7 @@ namespace MovieDatabaseProject
                     timer.Stop();
                 };
                 timer.Start();
+                counter = 0;
                 return;
             }
 
