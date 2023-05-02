@@ -3,7 +3,6 @@ using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -63,12 +62,6 @@ namespace MovieDatabaseProject
             }
         }
 
-        public void DescriptionNav(int page)
-        {
-            var main = App.Current.MainWindow as MainWindow;
-            main.navigate(page);
-        }
-
         public void getSimilarMovies()
         {
             string[] images = { "", "", "" };
@@ -85,31 +78,6 @@ namespace MovieDatabaseProject
 
             similarmoviesimages = images;
             similarmoviestitles = titles;
-        }
-
-        private void New_Search1_Click(object sender, RoutedEventArgs e)
-        {
-            string movie = movie1Name.Text;    
-            SearchPage search = new SearchPage();
-            search.searchbar.Text = movie;
-            search.search(movie);
-            DescriptionNav(0);
-        }
-        private void New_Search2_Click(object sender, RoutedEventArgs e)
-        {
-            string movie = movie2Name.Text;
-            SearchPage search = new SearchPage();
-            search.searchbar.Text = movie;
-            search.search(movie);
-            DescriptionNav(0);
-        }
-        private void New_Search3_Click(object sender, RoutedEventArgs e)
-        {
-            string movie = movie3Name.Text;
-            SearchPage search = new SearchPage();
-            search.searchbar.Text = movie;
-            search.search(movie);
-            DescriptionNav(0);
         }
     }
 }

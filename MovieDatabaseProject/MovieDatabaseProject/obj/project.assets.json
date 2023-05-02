@@ -135,6 +135,42 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "Vlc.DotNet.Core/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Vlc.DotNet.Core.Interops": "3.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Vlc.DotNet.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Vlc.DotNet.Core.dll": {}
+        }
+      },
+      "Vlc.DotNet.Core.Interops/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Vlc.DotNet.Core.Interops.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Vlc.DotNet.Core.Interops.dll": {}
+        }
+      },
+      "Vlc.DotNet.Wpf/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Vlc.DotNet.Core": "3.1.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Vlc.DotNet.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Vlc.DotNet.Wpf.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
       "WpfAnimatedGif/2.0.2": {
         "type": "package",
         "compile": {
@@ -316,6 +352,56 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Vlc.DotNet.Core/3.1.0": {
+      "sha512": "t9jinVlEEgS0PHyNeu+jGE06yKeqyQ4RG7Bpno1M1ghxAhogpc7rFkRg5/CMHINsZJw4nr88I3xrUecanlA5kA==",
+      "type": "package",
+      "path": "vlc.dotnet.core/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/Vlc.DotNet.Core.dll",
+        "lib/net40/Vlc.DotNet.Core.dll",
+        "lib/net45/Vlc.DotNet.Core.dll",
+        "lib/netstandard1.3/Vlc.DotNet.Core.dll",
+        "lib/netstandard2.0/Vlc.DotNet.Core.dll",
+        "logo.png",
+        "vlc.dotnet.core.3.1.0.nupkg.sha512",
+        "vlc.dotnet.core.nuspec"
+      ]
+    },
+    "Vlc.DotNet.Core.Interops/3.1.0": {
+      "sha512": "22JkrxSBN9OVkxT3zMgwT67kUc+RQx35+NG5md9n9qM7vEI2EUEVqHeKiO8ssF7/mYi6Z8lJx4AgdWa5JAvONw==",
+      "type": "package",
+      "path": "vlc.dotnet.core.interops/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/Vlc.DotNet.Core.Interops.dll",
+        "lib/net40/Vlc.DotNet.Core.Interops.dll",
+        "lib/net45/Vlc.DotNet.Core.Interops.dll",
+        "lib/netstandard1.3/Vlc.DotNet.Core.Interops.dll",
+        "lib/netstandard2.0/Vlc.DotNet.Core.Interops.dll",
+        "logo.png",
+        "vlc.dotnet.core.interops.3.1.0.nupkg.sha512",
+        "vlc.dotnet.core.interops.nuspec"
+      ]
+    },
+    "Vlc.DotNet.Wpf/3.1.0": {
+      "sha512": "JvCAsjK67rjEeoOwFSZdGi7bx0Sp1/KjVat3GgdAfSKDrxy0ZD5Ih5GWuBZzQfplhEAbTT3DzqsvzcVYeWnI5w==",
+      "type": "package",
+      "path": "vlc.dotnet.wpf/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/Vlc.DotNet.Wpf.dll",
+        "lib/net40/Vlc.DotNet.Wpf.dll",
+        "lib/net45/Vlc.DotNet.Wpf.dll",
+        "lib/netcoreapp3.0/Vlc.DotNet.Wpf.dll",
+        "logo.png",
+        "vlc.dotnet.wpf.3.1.0.nupkg.sha512",
+        "vlc.dotnet.wpf.nuspec"
+      ]
+    },
     "WpfAnimatedGif/2.0.2": {
       "sha512": "B0j9SqtThyHVTiOPvu6yR+39Te0g3o+7Jjb+qEm7+Iz1HRqbE5/4QV+ntHWOYYBPOUFr9x1mdzGl/EzWP+nKiA==",
       "type": "package",
@@ -340,6 +426,12 @@
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "IronPython >= 3.4.0",
+<<<<<<< HEAD
+=======
+      "Microsoft.Web.WebView2 >= 1.0.1722.45",
+      "Vlc.DotNet.Core >= 3.1.0",
+      "Vlc.DotNet.Wpf >= 3.1.0",
+>>>>>>> parent of 2a66c3b (have to stop for the night because I sent too many requests, trailer fixed and stuff)
       "WpfAnimatedGif >= 2.0.2"
     ]
   },
@@ -393,6 +485,21 @@
             "target": "Package",
             "version": "[3.4.0, )"
           },
+<<<<<<< HEAD
+=======
+          "Microsoft.Web.WebView2": {
+            "target": "Package",
+            "version": "[1.0.1722.45, )"
+          },
+          "Vlc.DotNet.Core": {
+            "target": "Package",
+            "version": "[3.1.0, )"
+          },
+          "Vlc.DotNet.Wpf": {
+            "target": "Package",
+            "version": "[3.1.0, )"
+          },
+>>>>>>> parent of 2a66c3b (have to stop for the night because I sent too many requests, trailer fixed and stuff)
           "WpfAnimatedGif": {
             "target": "Package",
             "version": "[2.0.2, )"

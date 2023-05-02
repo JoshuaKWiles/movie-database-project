@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f064e007-ce8d-4e5c-a0d8-7db926fbeff3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/.vs/MovieDatabaseProject/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/.vs/MovieDatabaseProject/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/SearchPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/SearchPage.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/TrailerPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/TrailerPage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/TrailerPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/TrailerPage.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Debug/net6.0-windows/MovieDatabaseProject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Debug/net6.0-windows/MovieDatabaseProject.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Debug/net6.0-windows/MovieDatabaseProject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Debug/net6.0-windows/MovieDatabaseProject.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Debug/net6.0-windows/scraper/actors.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Debug/net6.0-windows/scraper/actors.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Debug/net6.0-windows/scraper/description.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Debug/net6.0-windows/scraper/description.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Debug/net6.0-windows/scraper/moviename.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Debug/net6.0-windows/scraper/screenshots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Debug/net6.0-windows/scraper/screenshots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Debug/net6.0-windows/scraper/similarmovies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Debug/net6.0-windows/scraper/similarmovies.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Debug/net6.0-windows/scraper/trailer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Debug/net6.0-windows/scraper/trailer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Debug/net6.0-windows/scraper/trivia.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Debug/net6.0-windows/scraper/trivia.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Release/net6.0-windows/MovieDatabaseProject.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Release/net6.0-windows/MovieDatabaseProject.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Release/net6.0-windows/MovieDatabaseProject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Release/net6.0-windows/MovieDatabaseProject.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Release/net6.0-windows/MovieDatabaseProject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Release/net6.0-windows/MovieDatabaseProject.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Release/net6.0-windows/Vlc.DotNet.Core.Interops.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Release/net6.0-windows/Vlc.DotNet.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Release/net6.0-windows/Vlc.DotNet.Wpf.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Release/net6.0-windows/ref/MovieDatabaseProject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/bin/Release/net6.0-windows/ref/MovieDatabaseProject.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Debug/net6.0-windows/MovieDatabaseProject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Debug/net6.0-windows/MovieDatabaseProject.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Debug/net6.0-windows/MovieDatabaseProject.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Debug/net6.0-windows/MovieDatabaseProject.g.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Debug/net6.0-windows/MovieDatabaseProject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Debug/net6.0-windows/MovieDatabaseProject.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Debug/net6.0-windows/MovieDatabaseProject_MarkupCompile.i.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Debug/net6.0-windows/MovieDatabaseProject_MarkupCompile.i.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Debug/net6.0-windows/MovieDatabaseProject_MarkupCompile.i.lref" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Debug/net6.0-windows/TrailerPage.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Debug/net6.0-windows/TrailerPage.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Debug/net6.0-windows/TrailerPage.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Debug/net6.0-windows/TrailerPage.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Debug/net6.0-windows/TrailerPage.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Debug/net6.0-windows/TrailerPage.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/ActorsPage.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/ActorsPage.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/ActorsPage.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/ActorsPage.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/ActorsPage.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/ActorsPage.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/DescriptionPage.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/DescriptionPage.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/DescriptionPage.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/DescriptionPage.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/DescriptionPage.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/DescriptionPage.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/FactsPage.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/FactsPage.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/FactsPage.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/FactsPage.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/FactsPage.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/FactsPage.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MainPage.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MainPage.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MainPage.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MainPage.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MainPage.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MainPage.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MovieDatabaseProject.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MovieDatabaseProject.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MovieDatabaseProject.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MovieDatabaseProject.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MovieDatabaseProject.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MovieDatabaseProject.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MovieDatabaseProject.designer.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MovieDatabaseProject.designer.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MovieDatabaseProject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MovieDatabaseProject.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MovieDatabaseProject.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MovieDatabaseProject.g.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MovieDatabaseProject.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MovieDatabaseProject.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MovieDatabaseProject_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MovieDatabaseProject_MarkupCompile.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MovieDatabaseProject_MarkupCompile.i.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/MovieDatabaseProject_MarkupCompile.i.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/ScreenshotsPage.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/ScreenshotsPage.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/ScreenshotsPage.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/ScreenshotsPage.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/ScreenshotsPage.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/ScreenshotsPage.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/SearchPage.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/SearchPage.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/SearchPage.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/SearchPage.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/SearchPage.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/SearchPage.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/SimilarMoviesPage.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/SimilarMoviesPage.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/SimilarMoviesPage.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/SimilarMoviesPage.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/SimilarMoviesPage.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/SimilarMoviesPage.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/TrailerPage.baml" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/TrailerPage.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/TrailerPage.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/TrailerPage.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/TrailerPage.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/TrailerPage.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/ref/MovieDatabaseProject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieDatabaseProject/MovieDatabaseProject/obj/Release/net6.0-windows/ref/MovieDatabaseProject.dll" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2PAr5tKnd8bpH4rNtHkEhFH7eCW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Youtube Scraper" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f064e007-ce8d-4e5c-a0d8-7db926fbeff3" name="Changes" comment="" />
+      <created>1682910546657</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682910546657</updated>
+    </task>
+    <servers />
+  </component>
+</project>

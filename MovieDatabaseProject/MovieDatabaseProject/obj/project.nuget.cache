@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "5FFfln1d14p/RAt1xdOHM1FBmK9rHbslDKvMuiR4/ldLg5igIU783OFmaVF/XBhEbFPJvtPSoqdwYwxlsGIkJA==",
+=======
+  "dgSpecHash": "efLizmUZphs0QlrqeBZ2unroEcd6cVQKTPVf1At5tNbjfwbV0TtGXP4U9qqlfM+RDIz/vxObRjMPV7AkTitN0w==",
+>>>>>>> parent of 2a66c3b (have to stop for the night because I sent too many requests, trailer fixed and stuff)
   "success": true,
   "projectFilePath": "C:\\Users\\Josh\\Documents\\MovieDatabaseProject\\movie-database-project\\MovieDatabaseProject\\MovieDatabaseProject\\MovieDatabaseProject.csproj",
   "expectedPackageFiles": [
@@ -8,6 +12,9 @@
     "C:\\Users\\Josh\\.nuget\\packages\\ironpython\\3.4.0\\ironpython.3.4.0.nupkg.sha512",
     "C:\\Users\\Josh\\.nuget\\packages\\mono.unix\\7.1.0-final.1.21458.1\\mono.unix.7.1.0-final.1.21458.1.nupkg.sha512",
     "C:\\Users\\Josh\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
+    "C:\\Users\\Josh\\.nuget\\packages\\vlc.dotnet.core\\3.1.0\\vlc.dotnet.core.3.1.0.nupkg.sha512",
+    "C:\\Users\\Josh\\.nuget\\packages\\vlc.dotnet.core.interops\\3.1.0\\vlc.dotnet.core.interops.3.1.0.nupkg.sha512",
+    "C:\\Users\\Josh\\.nuget\\packages\\vlc.dotnet.wpf\\3.1.0\\vlc.dotnet.wpf.3.1.0.nupkg.sha512",
     "C:\\Users\\Josh\\.nuget\\packages\\wpfanimatedgif\\2.0.2\\wpfanimatedgif.2.0.2.nupkg.sha512"
   ],
   "logs": []

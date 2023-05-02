@@ -49,6 +49,21 @@
               "target": "Package",
               "version": "[3.4.0, )"
             },
+<<<<<<< HEAD
+=======
+            "Microsoft.Web.WebView2": {
+              "target": "Package",
+              "version": "[1.0.1722.45, )"
+            },
+            "Vlc.DotNet.Core": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Vlc.DotNet.Wpf": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+>>>>>>> parent of 2a66c3b (have to stop for the night because I sent too many requests, trailer fixed and stuff)
             "WpfAnimatedGif": {
               "target": "Package",
               "version": "[2.0.2, )"

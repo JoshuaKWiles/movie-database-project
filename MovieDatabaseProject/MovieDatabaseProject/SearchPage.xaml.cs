@@ -24,9 +24,6 @@ namespace MovieDatabaseProject
     public partial class SearchPage : Page
     {
         bool found = false;
-        bool searchrunning = false;
-        bool error = false;
-        int counter = 0;
         private void installpy()
         {
             ProcessStartInfo ProcessInfo;
@@ -53,26 +50,6 @@ namespace MovieDatabaseProject
         public SearchPage()
         {
             InitializeComponent();
-
-            searchbar.Visibility = Visibility.Visible;
-            searchbutton.Visibility = Visibility.Visible;
-            title.Visibility = Visibility.Visible;
-            instructions.Visibility = Visibility.Visible;
-
-            loadinggif.Visibility = Visibility.Hidden;
-            loadingmessage.Visibility = Visibility.Hidden;
-
-            if (searchrunning)
-            {
-
-                searchbar.Visibility = Visibility.Hidden;
-                searchbutton.Visibility = Visibility.Hidden;
-                title.Visibility = Visibility.Hidden;
-                instructions.Visibility = Visibility.Hidden;
-
-                loadinggif.Visibility = Visibility.Visible;
-                loadingmessage.Visibility = Visibility.Visible;
-            }
             var main = App.Current.MainWindow as MainWindow;
         }
         public void DescriptionNav(int page)
@@ -80,34 +57,26 @@ namespace MovieDatabaseProject
             var main = App.Current.MainWindow as MainWindow;
             main.navigate(page);
         }
-        public void showerror()
-        {
-                searchbar.Text = "";
-                searchbar.Foreground = Brushes.Black;
-                searchbar.FontWeight = FontWeights.Regular;     
-        }
         public void loading()
         {
-            
             if (File.Exists("scraper/moviename.txt"))
             {
+<<<<<<< HEAD
                 if(counter == 200)
                 {
                     error = true;
                     return;
                 }
+=======
+>>>>>>> parent of 2a66c3b (have to stop for the night because I sent too many requests, trailer fixed and stuff)
                 Thread.Sleep(200);
-                counter++;
                 loading();
             }
             found = true;
         }
-        public async void search(string moviename)
+        public async void search()
         {
-            searchrunning = true;
-
-            InitializeComponent();
-
+            string moviename = searchbar.Text;
             if (moviename == "")
             {
                 return;
@@ -125,8 +94,6 @@ namespace MovieDatabaseProject
             var t = Task.Run(() => loading());
             await t;
 
-
-
             searchbar.Visibility = Visibility.Visible;
             searchbutton.Visibility = Visibility.Visible;
             title.Visibility = Visibility.Visible;
@@ -134,6 +101,7 @@ namespace MovieDatabaseProject
 
             loadinggif.Visibility = Visibility.Hidden;
             loadingmessage.Visibility = Visibility.Hidden;
+<<<<<<< HEAD
             
             if (error)
             {
@@ -154,13 +122,15 @@ namespace MovieDatabaseProject
             }
 
             searchrunning = false;
+=======
+>>>>>>> parent of 2a66c3b (have to stop for the night because I sent too many requests, trailer fixed and stuff)
 
             DescriptionNav(7);
+            
         }
         private void search_button_Click(object sender, RoutedEventArgs e)
         {
-            string moviename = searchbar.Text;
-            search(moviename);
+            search();
         }
     }
 }

@@ -24,7 +24,7 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock x:Name="movie_title" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="*Movie Name* Trailer" Margin="0,0,0,0"/>
+        <TextBlock x:Name="movie_title" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="*Movie Name* Trailer" Margin="0,0,0,0"/>
 
 <<<<<<< HEAD
        
@@ -44,9 +44,13 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 =======
         <DockPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="4" Margin="0 0 0 20">
             <wv2:WebView2 Name="webView"
+                  Source="https://www.youtube.com/embed/u31qwQUeGuM"
                   Visibility="Visible"/>
         </DockPanel>
+<<<<<<< HEAD
         <TextBlock Name="error" Visibility="Hidden" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="error"/>
 >>>>>>> parent of 4667f03 (working on release version)
+=======
+>>>>>>> parent of 2a66c3b (have to stop for the night because I sent too many requests, trailer fixed and stuff)
     </Grid>
 </Page>

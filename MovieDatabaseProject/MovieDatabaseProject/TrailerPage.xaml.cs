@@ -24,10 +24,18 @@ namespace MovieDatabaseProject
     public partial class TrailerPage : Page
     {
         string trailer = "https://www.youtube.com/embed/u31qwQUeGuM";
+<<<<<<< HEAD
+=======
+        public async void initializewebview()
+        {
+            await webView.EnsureCoreWebView2Async(null);
+            //webView.CoreWebView2.Navigate("https://www.youtube.com/embed/u31qwQUeGuM");
+            webView.CoreWebView2.Navigate(trailer);
+        }
+>>>>>>> parent of 2a66c3b (have to stop for the night because I sent too many requests, trailer fixed and stuff)
         public TrailerPage()
         {
             InitializeComponent();
-            error.Visibility = Visibility.Hidden;
             initializewebview();
             getTrailer();
             var main = App.Current.MainWindow as MainWindow;

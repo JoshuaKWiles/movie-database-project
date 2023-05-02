@@ -25,7 +25,7 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock x:Name="movie_title" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="*Movie Name* Screenshots" Margin="0,0,0,0"/>
+        <TextBlock x:Name="movie_title" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="*Movie Name* Screenshots" Margin="0,0,0,0"/>
 
         <Image Name="picHolder" Stretch="Uniform" Source="https://www.goway.com/media/cache/38/e9/38e939fb4c5bc42de16322f121644cbc.jpg" VerticalAlignment="Center"
                ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Row="1" Grid.Column="1" Grid.RowSpan="3" Grid.ColumnSpan="4"/>

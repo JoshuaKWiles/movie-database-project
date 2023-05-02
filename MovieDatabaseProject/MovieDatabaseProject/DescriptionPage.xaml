@@ -25,7 +25,7 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         </Grid.ColumnDefinitions>
  
 
-        <TextBlock x:Name="movie_title" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="*Movie Name* Description" Margin="0,0,0,0"/>
+        <TextBlock x:Name="movie_title" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="*Movie Name* Description" Margin="0,0,0,0"/>
 
         
         <ScrollViewer Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="3" Margin="0 0 0 20">

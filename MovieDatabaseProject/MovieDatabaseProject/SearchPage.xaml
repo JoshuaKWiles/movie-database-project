@@ -24,7 +24,7 @@
             <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
-        <TextBox Name="searchbar" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="0 30 0 30" FontSize="30" Height="56" TextAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox Name="searchbar" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="0 30 0 30" FontSize="30" Height="56" TextAlignment="Left" VerticalAlignment="Center"/>
         <Button Name="searchbutton"  FontSize="20" BorderThickness="2" Grid.Row="1" Grid.Column="4"  Margin="0 30 0 30" Height="56" Click="search_button_Click">
             Search
         </Button>

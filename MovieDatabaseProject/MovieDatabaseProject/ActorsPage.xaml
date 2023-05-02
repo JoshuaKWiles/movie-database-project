@@ -26,7 +26,7 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         </Grid.ColumnDefinitions>
 
 
-        <TextBlock x:Name="movie_title" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="30" Text="*Movie Name* Actors" Margin="0,0,0,10"/>
+        <TextBlock x:Name="movie_title" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="30" Text="*Movie Name* Actors" Margin="0,0,0,10"/>
 
         <!--
         
