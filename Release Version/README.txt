@@ -6,6 +6,8 @@ Welcome to the ultimate movie database. To begin, perform the following steps.
 
 3. Also ensure latest version of microsoft edge is installed
 
-4. To ensure python compatability, navigate to the "Movie Database\scraper" folder in cmd, and run the command "python main.py", this installs any lingering libraries prior to execution. 
+4. To ensure python compatability, navigate to the "Movie Database\scraper" by folder in cmd by copying the folder path and entering the command "cd folderpath", where folderpath is the path copied
 
-5. Finally, run the "MovieDatabaseProject.exe" file. 
+5. Run the command "python main.py", this installs any lingering libraries prior to execution. 
+ 
+6. Finally, run the "MovieDatabaseProject.exe" file. 
