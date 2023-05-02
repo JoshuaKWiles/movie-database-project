@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\kingj\source\repos\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\obj\Debug\net6.0-windows\
+C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\obj\Debug\net6.0-windows\
 MovieDatabaseProject
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\kingj\source\repos\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\App.xaml
+C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\App.xaml
 9143525467
-31078994506
+
 13-1416850626
-206-1466741384
+203420485555
 ActorsPage.xaml;DescriptionPage.xaml;FactsPage.xaml;MainPage.xaml;MainWindow.xaml;ScreenshotsPage.xaml;SearchPage.xaml;SimilarMoviesPage.xaml;TrailerPage.xaml;
 
 False

@@ -36,6 +36,8 @@ namespace MovieDatabaseProject
             string moviename = File.ReadAllText(@"scraper\secretmoviename.txt");
             movie_title.Text = moviename + " Description";
             DescriptionBox.Text = description;
+
+            Console.WriteLine("Working");
         }
         public void getDescription()
         {

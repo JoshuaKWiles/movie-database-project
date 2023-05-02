@@ -13,7 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Microsoft.Web.WebView2.Core;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace MovieDatabaseProject
 {
@@ -23,41 +24,23 @@ namespace MovieDatabaseProject
     public partial class TrailerPage : Page
     {
         string trailer = "https://www.youtube.com/embed/u31qwQUeGuM";
-        public async void initializewebview()
-        {
-            if(trailer[trailer.Length - 1] == 1)
-            {
-                webView.Visibility = Visibility.Visible;
-                error.Visibility = Visibility.Visible;
-                webView.CoreWebView2.Navigate("https://www.youtube.com/embed/u31qwQUeGuM");
-                error.Text = "Trailer Not Found :(";
-                return;
-            }    
-            await webView.EnsureCoreWebView2Async(null);
-            webView.CoreWebView2.Navigate(trailer);
-        }
         public TrailerPage()
         {
             InitializeComponent();
-            error.Visibility = Visibility.Hidden;
-            getTrailer();
 
-                initializewebview();
+            //getTrailer();
 
-            /*
-                if (!(trailer[trailer.Length - 1] == 1))
-                {
-                    webView.Visibility= Visibility.Hidden;
-                    error.Visibility = Visibility.Visible;
-                    error.Text = "Trailer Found, error with Microsoft Web View 2. Watch trailer ";
-                }
-                else
-                {
-                    error.Text = "Trailer Not Found, error with Microsoft Web View 2.";
-                }
-            */
+            if (!(trailer[trailer.Length - 1] == 1))
+            {
 
+                error.Visibility = Visibility.Visible;
+                error.Text = "Trailer Found, error with Microsoft Web View 2. Watch trailer ";
+            }
+            else
+            {
 
+                error.Text = "Trailer Not Found, error with Microsoft Web View 2.";
+            }
             var main = App.Current.MainWindow as MainWindow;
             main.DescriptionButton.Background = new SolidColorBrush(Colors.LightGray);
             main.ActorsButton.Background = new SolidColorBrush(Colors.LightGray);
@@ -65,19 +48,42 @@ namespace MovieDatabaseProject
             main.ScreenshotsButton.Background = new SolidColorBrush(Colors.LightGray);
             main.FactsButton.Background = new SolidColorBrush(Colors.LightGray);
             main.SimilarButton.Background = new SolidColorBrush(Colors.LightGray);
-            //string trailerLink = getData();
             string moviename = File.ReadAllText(@"scraper\secretmoviename.txt");
             movie_title.Text = moviename + " Trailer";
-            
+
         }
         public void getTrailer()
         {
             string trail = File.ReadAllText("scraper\\trailer.txt");
             trailer = trail;
         }
-        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start(trailer);
+            string url = trailer;
+            try
+            {
+                Process.Start(url);
+            }
+            catch
+            {
+                if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                {
+                    url = url.Replace("&", "^&");
+                    Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+                }
+                else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                {
+                    Process.Start("xdg-open", url);
+                }
+                else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+                {
+                    Process.Start("open", url);
+                }
+                else
+                {
+                    error.Text = "Yo mama";
+                }
+            }
         }
     }
 }
