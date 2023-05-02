@@ -26,6 +26,7 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 
         <TextBlock x:Name="movie_title" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="*Movie Name* Trailer" Margin="0,0,0,0"/>
 
+<<<<<<< HEAD
        
         <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Bottom">
             <TextBlock Name="error" Visibility="Visible" FontSize="20" TextWrapping="Wrap">
@@ -40,5 +41,12 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
             </Button>
         </StackPanel>
         
+=======
+        <DockPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="4" Margin="0 0 0 20">
+            <wv2:WebView2 Name="webView"
+                  Visibility="Visible"/>
+        </DockPanel>
+        <TextBlock Name="error" Visibility="Hidden" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="error"/>
+>>>>>>> parent of 4667f03 (working on release version)
     </Grid>
 </Page>

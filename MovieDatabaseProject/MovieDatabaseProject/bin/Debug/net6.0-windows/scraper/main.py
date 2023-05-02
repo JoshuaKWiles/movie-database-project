@@ -222,17 +222,29 @@ with ThreadPoolExecutor() as executor:
 
 #get description, store to string
     description = mainthread[0].result()
+
 #get actors info, store to list (format: linkactor1, nameactor1, linkactor2, nameactor2, etc)
     actors = mainthread[1].result()
+
 #get movietrailer source, store to string
     trailer = mainthread[2].result()
+
 #get screenshtos links, store to list
     screenshots = mainthread[3].result()
+
 #get trivia, store strings in list
     trivia = mainthread[4].result()
+
 #get similarmovies, store strings in list
     similarmovies = mainthread[5].result()
 
+
+#description = string
+#actors = list
+#trailer = string
+#screenshot = list
+#trivia = list
+#similarmovies = list
 temp = ''
 
 with open('description.txt', 'w') as files:

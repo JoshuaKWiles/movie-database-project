@@ -13,7 +13,11 @@ C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabas
 9143525467
 
 131923422602
+<<<<<<< HEAD
 203420485555
+=======
+2091295705417
+>>>>>>> parent of 4667f03 (working on release version)
 ActorsPage.xaml;DescriptionPage.xaml;FactsPage.xaml;MainPage.xaml;MainWindow.xaml;ScreenshotsPage.xaml;SearchPage.xaml;SimilarMoviesPage.xaml;TrailerPage.xaml;
 
 False

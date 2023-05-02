@@ -27,20 +27,9 @@ namespace MovieDatabaseProject
         public TrailerPage()
         {
             InitializeComponent();
-
-            //getTrailer();
-
-            if (!(trailer[trailer.Length - 1] == 1))
-            {
-
-                error.Visibility = Visibility.Visible;
-                error.Text = "Trailer Found, error with Microsoft Web View 2. Watch trailer ";
-            }
-            else
-            {
-
-                error.Text = "Trailer Not Found, error with Microsoft Web View 2.";
-            }
+            error.Visibility = Visibility.Hidden;
+            initializewebview();
+            getTrailer();
             var main = App.Current.MainWindow as MainWindow;
             main.DescriptionButton.Background = new SolidColorBrush(Colors.LightGray);
             main.ActorsButton.Background = new SolidColorBrush(Colors.LightGray);
@@ -56,34 +45,6 @@ namespace MovieDatabaseProject
         {
             string trail = File.ReadAllText("scraper\\trailer.txt");
             trailer = trail;
-        }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            string url = trailer;
-            try
-            {
-                Process.Start(url);
-            }
-            catch
-            {
-                if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-                {
-                    url = url.Replace("&", "^&");
-                    Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
-                }
-                else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-                {
-                    Process.Start("xdg-open", url);
-                }
-                else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-                {
-                    Process.Start("open", url);
-                }
-                else
-                {
-                    error.Text = "Yo mama";
-                }
-            }
         }
     }
 }

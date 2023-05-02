@@ -113,8 +113,7 @@ namespace MovieDatabaseProject
                 return;
             }
 
-                run_cmd(moviename);
-
+            run_cmd(moviename);
 
             searchbar.Visibility = Visibility.Hidden;
             searchbutton.Visibility = Visibility.Hidden;

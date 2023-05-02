@@ -81,6 +81,13 @@ C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabas
 C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Release\net6.0-windows\IronPython.Wpf.dll
 C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Release\net6.0-windows\IronPython.dll
 C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Release\net6.0-windows\Mono.Unix.dll
+<<<<<<< HEAD
+=======
+C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Release\net6.0-windows\Vlc.DotNet.Core.dll
+C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Release\net6.0-windows\Vlc.DotNet.Core.Interops.dll
+C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Release\net6.0-windows\Vlc.DotNet.Wpf.dll
+C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Release\net6.0-windows\WpfAnimatedGif.dll
+>>>>>>> parent of 4667f03 (working on release version)
 C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Release\net6.0-windows\runtimes\android-arm\native\libMono.Unix.so
 C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Release\net6.0-windows\runtimes\android-arm64\native\libMono.Unix.so
 C:\Users\Josh\Documents\MovieDatabaseProject\movie-database-project\MovieDatabaseProject\MovieDatabaseProject\bin\Release\net6.0-windows\runtimes\android-x64\native\libMono.Unix.so
