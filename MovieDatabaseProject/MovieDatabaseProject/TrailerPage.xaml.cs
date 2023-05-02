@@ -25,16 +25,21 @@ namespace MovieDatabaseProject
         string trailer = "https://www.youtube.com/embed/u31qwQUeGuM";
         public async void initializewebview()
         {
-            if(trailer[trailer.Length - 1] == 1)
+               
+            await webView.EnsureCoreWebView2Async(null);
+           
+            if (trailer[trailer.Length - 1] == 1)
             {
                 webView.Visibility = Visibility.Visible;
                 error.Visibility = Visibility.Visible;
                 webView.CoreWebView2.Navigate("https://www.youtube.com/embed/u31qwQUeGuM");
                 error.Text = "Trailer Not Found :(";
                 return;
-            }    
-            await webView.EnsureCoreWebView2Async(null);
-            webView.CoreWebView2.Navigate(trailer);
+            }
+            else
+            {
+                webView.CoreWebView2.Navigate(trailer);
+            }
         }
         public TrailerPage()
         {
